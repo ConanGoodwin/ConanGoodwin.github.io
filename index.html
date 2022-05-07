@@ -37,6 +37,17 @@
       margin: 2px;
       border: solid 1px;
       border-color: white;
+    }
+
+    #rodape {
+      background-color:#34AEC1;
+      padding: 10px;
+      margin: 2px;
+      border: solid 1px;
+      border-color: white;
+    }
+
+    .sobraDeCaixa {
       box-shadow: 10px 10px 10px 5px black;
     }
 
@@ -53,6 +64,10 @@
     .descricao-destaques {
       font-style: italic;
       text-decoration: underline;
+    }
+
+    .fundo-azul-escuro {
+      background-color: #535D94;
     }
 
     .lista-destaques {
@@ -74,7 +89,7 @@
 </head>
 
 <body>
-  <div id="cabecalho">
+  <div id="cabecalho" class="sobraDeCaixa">
     <img class="fotos-bordas-redondas" src="./Imagens/eu.jpg" alt="Minha foto atualizada" id="minhaFoto" width="200">
     <h1>Conan Goodwin</h1>
 
@@ -91,8 +106,9 @@
   <a href="#lsSkillsCompetencias">Demais competências profissionais</a><br>
   <a href="#siteInteresse">Site de interesse</a>
 
+  <div id="divListaSkills">
   <h2 id="lsSkillsDestaque">Lista de Skills destacadas na área:</h2>
-  <ul>
+  <ul class="fundo-azul-escuro sobraDeCaixa">
     <li class="liSkillsDestaque"><strong class="lista-destaques">C# avançado</strong></li>
     <li class="liSkillsDestaque">Python avançado</li>
     <li class="liSkillsDestaque">SQL</li>
@@ -103,7 +119,7 @@
   </ul>
 
   <h2 id="lsSkillsSecundarias">Lista de Skills secundárias na área:</h2>
-  <ul>
+  <ul class="fundo-azul-escuro sobraDeCaixa">
     <li class="liSkillsSecundarias">Visual Basic</li>
     <li class="liSkillsSecundarias">VBA</li>
     <li class="liSkillsSecundarias">Delph's</li>
@@ -115,7 +131,7 @@
   </ul>
 
   <h2 id="lsSkillsOutras">Lista de outras Skills:</h2>
-  <ul>
+  <ul class="fundo-azul-escuro sobraDeCaixa">
     <li class="liDemaisSkills">Html</li>
     <li class="liDemaisSkills">CSS</li>
     <li class="liDemaisSkills">ASP</li>
@@ -130,7 +146,7 @@
   </ul>
 
   <h2 id="lsSkillsCompetencias">Demais Competências:</h2>
-  <ul>
+  <ul class="fundo-azul-escuro sobraDeCaixa">
     <li class="liDemaisSkills">Auditoria</li>
     <li class="liDemaisSkills">Pesquisa</li>
     <li class="liDemaisSkills">Monitoramento remoto</li>
@@ -141,10 +157,14 @@
     <li class="liDemaisSkills">Produção de eventos</li>
     <li><a href="#indice"><img src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a></li>
   </ul>
+  </div>
+
+  <div id="rodape">
   <a href="#cabecalho">Foto de capa</a>
   <br>
   <em>Site de grande interesse:</em> <a href="https://www.inovacaotecnologica.com.br/" target="_blank"
     id="siteInteresse">Inovação Tecnológica</a>
+  </div>
 </body>
 
 </html>
