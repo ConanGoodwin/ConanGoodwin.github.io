@@ -8,28 +8,46 @@
   <title>Portfolio Web Conan Goodwin</title>
   <style>
     @font-face {
-      font-family: Abbey;
-      src: url('Abbey.ttf');
+      font-family: Grafite;
+      src: url(/Fontes/AlloyInk-nRLyO.ttf);
+    }
+
+    @font-face {
+      font-family: CanetaPena;
+      src: url(/Fontes/SenjaSantuy-yw5qq.otf);
     }
 
     h1 {
-      font-family: URW Bookman;
+      font-family: Grafite;
+      font-weight: 80;
+      font-size: xx-large;
     }
 
     body {
-      background-color: #F3E54F;
+      background-color:  #FAB947;
     }
 
     li {
-      font-size:larger;
+      font-size: larger;
     }
 
-    .fotos-bordas-redondas{
-      border-radius: 30%;
+    #cabecalho{
+      background-color: #F3E54F;
+      padding: 10px;
+      margin: 2px;
+      border: solid 1px;
+      border-color: white;
+      box-shadow: 10px 10px 10px 5px black;
+    }
+
+    .fotos-bordas-redondas {
+      border-radius: 0 30% 0 30%;
     }
 
     #descricao {
-      font-family: monospace;
+      font-family: CanetaPena;
+      font-size: 30px;
+      font-weight: 80;
     }
 
     .descricao-destaques {
@@ -41,12 +59,12 @@
       text-decoration: underline;
     }
 
-    .liSkillsDestaque{
-      font-size:40px;
+    .liSkillsDestaque {
+      font-size: 40px;
     }
 
     .liSkillsSecundarias {
-      font-size:30px;
+      font-size: 30px;
     }
 
     .liDemaisSkills {
@@ -56,10 +74,15 @@
 </head>
 
 <body>
-  <img class="fotos-bordas-redondas" src="./Imagens/eu.jpg" alt="Minha foto atualizada" id="minhaFoto" width="200">
-  <h1>Conan Goodwin</h1>
+  <div id="cabecalho">
+    <img class="fotos-bordas-redondas" src="./Imagens/eu.jpg" alt="Minha foto atualizada" id="minhaFoto" width="200">
+    <h1>Conan Goodwin</h1>
 
-  <h3 id="descricao">Me chamo Conan (nome real, rs), sou <strong class="descricao-destaques">Brasileiro</strong>, moro no <strong class="descricao-destaques">Rio de Janeiro</strong> capital e tenho formação acadêmica voltada para Informática. Atualmente estou estudante no curso de Desenvolvimento Web pela <a href="https://app.betrybe.com/" target="_blank">Trybe!</a></h3>
+    <h3 id="descricao">Me chamo Conan (nome real, rs), sou <strong class="descricao-destaques">Brasileiro</strong>, moro
+      no <strong class="descricao-destaques">Rio de Janeiro</strong> capital e tenho formação acadêmica voltada para
+      Informática. Atualmente estou estudante no curso de Desenvolvimento Web pela <a href="https://app.betrybe.com/"
+        target="_blank">Trybe!</a></h3>
+  </div>
 
   <h4>Indice:</h4>
   <strong>Lista de Skills primárias na área. LOGO ABAIXO</strong><br>
@@ -116,7 +139,8 @@
   </ul>
   <a href="#minhaFoto">Foto de capa</a>
   <br>
-  <em>Site de grande interesse:</em> <a href="https://www.inovacaotecnologica.com.br/" target="_blank" id="siteInteresse">Inovação Tecnológica</a>
+  <em>Site de grande interesse:</em> <a href="https://www.inovacaotecnologica.com.br/" target="_blank"
+    id="siteInteresse">Inovação Tecnológica</a>
 </body>
 
 </html>
