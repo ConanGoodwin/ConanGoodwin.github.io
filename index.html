@@ -6,70 +6,165 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Web Conan Goodwin</title>
+  <style>
+    @font-face {
+      font-family: Grafite;
+      src: url(/Fontes/AlloyInk-nRLyO.ttf);
+    }
+
+    @font-face {
+      font-family: CanetaPena;
+      src: url(/Fontes/SenjaSantuy-yw5qq.otf);
+    }
+
+    h1 {
+      font-family: Grafite;
+      font-weight: 80;
+      font-size: xx-large;
+    }
+
+    body {
+      background-color:  #FAB947;
+    }
+
+    li {
+      font-size: larger;
+    }
+
+    #cabecalho{
+      background-color: #F3E54F;
+      padding: 10px;
+      margin: 2px;
+      border: solid 1px;
+      border-color: white;
+    }
+
+    #rodape {
+      background-color:#34AEC1;
+      padding: 10px;
+      margin: 2px;
+      border: solid 1px;
+      border-color: white;
+    }
+
+    .sobraDeCaixa {
+      box-shadow: 10px 10px 10px 5px black;
+    }
+
+    .fotos-bordas-redondas {
+      border-radius: 0 30% 0 30%;
+    }
+
+    #descricao {
+      font-family: CanetaPena;
+      font-size: 30px;
+      font-weight: 80;
+    }
+
+    .descricao-destaques {
+      font-style: italic;
+      text-decoration: underline;
+    }
+
+    .fundo-azul-escuro {
+      background-color: #535D94;
+    }
+
+    .lista-destaques {
+      text-decoration: underline;
+    }
+
+    .liSkillsDestaque {
+      font-size: 40px;
+    }
+
+    .liSkillsSecundarias {
+      font-size: 30px;
+    }
+
+    .liDemaisSkills {
+      font-size: 20px;
+    }
+  </style>
 </head>
 
 <body>
-  <img src="./Imagens/eu.jpg" alt="Minha foto atualizada" id="minhaFoto" width="200">
-  <h1>Conan Goodwin</h1>
+  <div id="cabecalho" class="sobraDeCaixa">
+    <img class="fotos-bordas-redondas" src="./Imagens/eu.jpg" alt="Minha foto atualizada" id="minhaFoto" width="200">
+    <h1>Conan Goodwin</h1>
 
-  <h3>Me chamo Conan (nome real, rs), sou Brasileiro, moro no Rio de Janeiro capital e tenho formação acadêmica voltada para Informática. Atualmente estou estudante no curso de Desenvolvimento Web pela <a href="https://app.betrybe.com/" target="_blank">Trybe!</a></h3>
+    <h3 id="descricao">Me chamo Conan (nome real, rs), sou <strong class="descricao-destaques">Brasileiro</strong>, moro
+      no <strong class="descricao-destaques">Rio de Janeiro</strong> capital e tenho formação acadêmica voltada para
+      Informática. Atualmente estou estudante no curso de Desenvolvimento Web pela <a href="https://app.betrybe.com/"
+        target="_blank">Trybe!</a></h3>
+  </div>
 
-  <h4>Indice:</h4>
+  <h4 id="indice">Indice:</h4>
   <strong>Lista de Skills primárias na área. LOGO ABAIXO</strong><br>
   <a href="#lsSkillsSecundarias">Lista de Skills secundárias na área</a><br>
   <a href="#lsSkillsOutras">Lista de outras Skills na área</a><br>
   <a href="#lsSkillsCompetencias">Demais competências profissionais</a><br>
   <a href="#siteInteresse">Site de interesse</a>
 
+  <div id="divListaSkills">
   <h2 id="lsSkillsDestaque">Lista de Skills destacadas na área:</h2>
-  <ul>
-    <li><strong>C# avançado</strong></li>
-    <li>Python avançado</li>
-    <li>SQL</li>
-    <li>JavaSript intermediário</li>
-    <li>JQuery</li>
-    <li>Xamarin</li>
+  <ul class="fundo-azul-escuro sobraDeCaixa">
+    <li class="liSkillsDestaque"><strong class="lista-destaques">C# avançado</strong></li>
+    <li class="liSkillsDestaque">Python avançado</li>
+    <li class="liSkillsDestaque">SQL</li>
+    <li class="liSkillsDestaque">JavaSript intermediário</li>
+    <li class="liSkillsDestaque">JQuery</li>
+    <li class="liSkillsDestaque">Xamarin</li>
+    <li><a href="#indice"><img src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a></li>
   </ul>
 
   <h2 id="lsSkillsSecundarias">Lista de Skills secundárias na área:</h2>
-  <ul>
-    <li>Visual Basic</li>
-    <li>VBA</li>
-    <li>Delph's</li>
-    <li>Visual Fox Pro</li>
-    <li>C</li>
-    <li>C++</li>
-    <li>Visual C</li>
+  <ul class="fundo-azul-escuro sobraDeCaixa">
+    <li class="liSkillsSecundarias">Visual Basic</li>
+    <li class="liSkillsSecundarias">VBA</li>
+    <li class="liSkillsSecundarias">Delph's</li>
+    <li class="liSkillsSecundarias">Visual Fox Pro</li>
+    <li class="liSkillsSecundarias">C</li>
+    <li class="liSkillsSecundarias">C++</li>
+    <li class="liSkillsSecundarias">Visual C</li>
+    <li><a href="#indice"><img src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a></li>
   </ul>
 
   <h2 id="lsSkillsOutras">Lista de outras Skills:</h2>
-  <ul>
-    <li>Html</li>
-    <li>CSS</li>
-    <li>ASP</li>
-    <li>Access</li>
-    <li>redes(básico)</li>
-    <li>MS Office (amplo conhecimento em Excel)</li>
-    <li>Crystal Reports</li>
-    <li>Blender</li>
-    <li>Corel Dream</li>
-    <li>Photoshop</li>
+  <ul class="fundo-azul-escuro sobraDeCaixa">
+    <li class="liDemaisSkills">Html</li>
+    <li class="liDemaisSkills">CSS</li>
+    <li class="liDemaisSkills">ASP</li>
+    <li class="liDemaisSkills">Access</li>
+    <li class="liDemaisSkills">redes(básico)</li>
+    <li class="liDemaisSkills">MS Office (amplo conhecimento em Excel)</li>
+    <li class="liDemaisSkills">Crystal Reports</li>
+    <li class="liDemaisSkills">Blender</li>
+    <li class="liDemaisSkills">Corel Dream</li>
+    <li class="liDemaisSkills">Photoshop</li>
+    <li><a href="#indice"><img src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a></li>
   </ul>
 
   <h2 id="lsSkillsCompetencias">Demais Competências:</h2>
-  <ul>
-    <li>Auditoria</li>
-    <li>Pesquisa</li>
-    <li>Monitoramento remoto</li>
-    <li>Implementação de projetos</li>
-    <li>Gerenciamento de serviços de TI</li>
-    <li>Suporte técnico</li>
-    <li>Relações públicas</li>
-    <li>Produção de eventos</li>
+  <ul class="fundo-azul-escuro sobraDeCaixa">
+    <li class="liDemaisSkills">Auditoria</li>
+    <li class="liDemaisSkills">Pesquisa</li>
+    <li class="liDemaisSkills">Monitoramento remoto</li>
+    <li class="liDemaisSkills">Implementação de projetos</li>
+    <li class="liDemaisSkills">Gerenciamento de serviços de TI</li>
+    <li class="liDemaisSkills">Suporte técnico</li>
+    <li class="liDemaisSkills">Relações públicas</li>
+    <li class="liDemaisSkills">Produção de eventos</li>
+    <li><a href="#indice"><img src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a></li>
   </ul>
-  <a href="#minhaFoto">Foto de capa</a>
+  </div>
+
+  <div id="rodape">
+  <a href="#cabecalho">Foto de capa</a>
   <br>
-  <em>Site de grande interesse:</em> <a href="https://www.inovacaotecnologica.com.br/" target="_blank" id="siteInteresse">Inovação Tecnológica</a>
+  <em>Site de grande interesse:</em> <a href="https://www.inovacaotecnologica.com.br/" target="_blank"
+    id="siteInteresse">Inovação Tecnológica</a>
+  </div>
 </body>
 
 </html>
