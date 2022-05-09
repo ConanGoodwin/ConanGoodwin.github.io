@@ -76,6 +76,10 @@ ul.fundo-azul-escuro {
   height: 5px;
 }
 
+#ulSkillsDestaque li:nth-child(odd) {
+  font-style: italic;
+}
+
 #ulSkillsDestaque li {
   font-size: 35px;
 }
@@ -97,7 +101,7 @@ ul.fundo-azul-escuro {
 }
 
 .indice {
-  display:block;
+  display:inline;
   list-style:none;
 }
 
