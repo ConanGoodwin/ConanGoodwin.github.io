@@ -37,9 +37,15 @@ ul.fundo-azul-escuro {
   font-size: 20px;
 }
 
+#minhaFoto {
+  background-color: crimson;
+  padding: 5px;
+  width: 18%;
+}
+
 #bannerDevWeb {
   height: 250px;
-  width: 80%;
+  width: 78%;
 }
 
 #cabecalho {
@@ -84,7 +90,6 @@ ul.fundo-azul-escuro {
 
 .fotos-bordas-redondas {
   border-radius: 0 30% 0 30%;
-  width: 19%;
 }
 
 #descricao {
