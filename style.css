@@ -22,7 +22,7 @@ li {
   font-size: larger;
 }
 
-ul li.fundo-azul-escuro {
+ul.fundo-azul-escuro li {
   font-family: monospace;
 }
 
