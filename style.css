@@ -1,0 +1,108 @@
+@font-face {
+  font-family: Grafite;
+  src: url(/Fontes/AlloyInk-nRLyO.ttf);
+}
+
+@font-face {
+  font-family: CanetaPena;
+  src: url(/Fontes/SenjaSantuy-yw5qq.otf);
+}
+
+h1 {
+  font-family: Grafite;
+  font-weight: 80;
+  font-size: xx-large;
+}
+
+body {
+  background-color: #FAB947;
+}
+
+li {
+  font-size: larger;
+}
+
+ul li {
+  font-family: monospace;
+}
+
+ul li span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+ul.fundo-azul-escuro {
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+#bannerDevWeb {
+  height: 250px;
+  width: 80%;
+}
+
+#cabecalho {
+  background-color: #F3E54F;
+  padding: 10px;
+  margin: 2px;
+  border: solid 1px;
+  border-color: white;
+}
+
+#divListaSkills {
+  overflow-x: auto;
+}
+
+#rodape {
+  background-color: #34AEC1;
+  padding: 10px;
+  margin: 2px;
+  border: solid 1px;
+  border-color: white;
+}
+
+#versao {
+  text-align: right;
+  text-decoration: underline;
+  font-style: oblique;
+  font-weight: bolder;
+  height: 5px;
+}
+
+#ulSkillsDestaque li {
+  font-size: 35px;
+}
+
+#ulSkillsSecundarias li {
+  font-size: 30px;
+}
+
+.sombraDeCaixa {
+  box-shadow: 10px 10px 10px 5px black;
+}
+
+.fotos-bordas-redondas {
+  border-radius: 0 30% 0 30%;
+  width: 19%;
+}
+
+#descricao {
+  font-family: CanetaPena;
+  font-size: 30px;
+  font-weight: 80;
+}
+
+.descricao-destaques {
+  font-style: italic;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.fundo-azul-escuro {
+  background-color: #535D94;
+}
+
+.formata-icones {
+  width: 18px;
+}
