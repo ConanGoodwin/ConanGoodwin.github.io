@@ -111,7 +111,7 @@ header {
 }
 
 .indice li {
-  display:inline;
+  display:inline-block;
   overflow-x: auto;
   list-style:none;
   padding: 2px;
