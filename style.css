@@ -22,7 +22,7 @@ li {
   font-size: larger;
 }
 
-ul li {
+ul li.fundo-azul-escuro {
   font-family: monospace;
 }
 
@@ -84,14 +84,6 @@ ul.fundo-azul-escuro {
   font-size: 30px;
 }
 
-.sombraDeCaixa {
-  box-shadow: 10px 10px 10px 5px black;
-}
-
-.fotos-bordas-redondas {
-  border-radius: 0 30% 0 30%;
-}
-
 #descricao {
   font-family: CanetaPena;
   font-size: 30px;
@@ -104,10 +96,27 @@ ul.fundo-azul-escuro {
   font-weight: 600;
 }
 
+.indice {
+  display:block;
+  list-style:none;
+}
+
+.sombraDeCaixa {
+  box-shadow: 10px 10px 10px 5px black;
+}
+
+.fotos-bordas-redondas {
+  border-radius: 0 30% 0 30%;
+}
+
 .fundo-azul-escuro {
   background-color: #535D94;
 }
 
 .formata-icones {
   width: 18px;
+}
+
+.formata-icones:hover {
+  width: 25px;
 }
