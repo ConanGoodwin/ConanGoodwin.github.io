@@ -112,10 +112,24 @@ header {
 
 .indice li {
   display:inline-block;
-  overflow-x: auto;
+  max-width: 17%;
+  text-align: center;
+  vertical-align: middle;
+  overflow-x:hidden;
   list-style:none;
   padding: 2px;
   margin: 5px;
+}
+
+.indice li:nth-of-type(1) {
+  text-align: right;
+}
+
+.indice {
+  max-width: 94%;
+  margin: 2%;
+  overflow-x: auto;
+  /* margin: auto; */
 }
 
 .sombraDeCaixa {
