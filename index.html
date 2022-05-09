@@ -6,191 +6,88 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Web Conan Goodwin</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
   <style>
-    @font-face {
-      font-family: Grafite;
-      src: url(/Fontes/AlloyInk-nRLyO.ttf);
-    }
-
-    @font-face {
-      font-family: CanetaPena;
-      src: url(/Fontes/SenjaSantuy-yw5qq.otf);
-    }
-
-    h1 {
-      font-family: Grafite;
-      font-weight: 80;
-      font-size: xx-large;
-    }
-
-    body {
-      background-color: #FAB947;
-    }
-
-    li {
-      font-size: larger;
-    }
-
-    #bannerDevWeb {
-      height: 250px;
-      width: 80%;
-    }
-
-    #cabecalho {
-      background-color: #F3E54F;
-      padding: 10px;
-      margin: 2px;
-      border: solid 1px;
-      border-color: white;
-    }
-
-    #divListaSkills {
-      overflow-x: auto;
-    }
-
-    #rodape {
-      background-color: #34AEC1;
-      padding: 10px;
-      margin: 2px;
-      border: solid 1px;
-      border-color: white;
-    }
-
-    #versao {
-      text-align: right;
-      text-decoration: underline;
-      font-style: oblique;
-      font-weight: bolder;
-      height: 5px;
-    }
-
-    .sombraDeCaixa {
-      box-shadow: 10px 10px 10px 5px black;
-    }
-
-    .fotos-bordas-redondas {
-      border-radius: 0 30% 0 30%;
-      width: 19%;
-    }
-
-    #descricao {
-      font-family: CanetaPena;
-      font-size: 30px;
-      font-weight: 80;
-    }
-
-    .descricao-destaques {
-      font-style: italic;
-      text-decoration: underline;
-      font-weight:600;
-    }
-
-    .fundo-azul-escuro {
-      background-color: #535D94;
-    }
-
-    .lista-menor-centradas {
-      margin-left: 15px;
-      margin-right: 15px;
-    }
-
-    .formata-icones {
-      width: 18px;
-    }
-
-    .lista-destaques {
-      text-decoration: underline;
-    }
-
-    .lista-skills-fonte {
-      font-family: monospace;
-    }
-
-    .liSkillsDestaque {
-      font-size: 35px;
-    }
-
-    .liSkillsSecundarias {
-      font-size: 30px;
-    }
-
-    .liDemaisSkills {
-      font-size: 20px;
-    }
   </style>
 </head>
 
 <body>
-  <div id="cabecalho" class="sombraDeCaixa">
-    <img id="minhaFoto" class="fotos-bordas-redondas" src="./Imagens/eu.jpg" alt="Minha foto atualizada" width="200">
-    <img id="bannerDevWeb" src="/Imagens/computer.png" alt="bannerDevWeb">
-    <h1>Conan Goodwin</h1>
+  <header>
+    <div id="cabecalho" class="sombraDeCaixa">
+      <img id="minhaFoto" class="fotos-bordas-redondas" src="./Imagens/eu.jpg" alt="Minha foto atualizada" width="200">
+      <img id="bannerDevWeb" src="/Imagens/computer.png" alt="bannerDevWeb">
+      <h1>Conan Goodwin</h1>
 
-    <h3 id="descricao">Me chamo Conan (nome real, rs), sou <span class="descricao-destaques">Brasileiro</span>, moro
-      no <span class="descricao-destaques">Rio de Janeiro</span> capital e tenho formação acadêmica voltada para
-      Informática. Atualmente estou estudante no curso de Desenvolvimento Web pela <a href="https://app.betrybe.com/"
-        target="_blank">Trybe!</a></h3>
-  </div>
+      <h3 id="descricao">Me chamo Conan (nome real, rs), sou <span class="descricao-destaques">Brasileiro</span>, moro
+        no <span class="descricao-destaques">Rio de Janeiro</span> capital e tenho formação acadêmica voltada para
+        Informática. Atualmente estou estudante no curso de Desenvolvimento Web pela <a href="https://app.betrybe.com/"
+          target="_blank">Trybe!</a></h3>
+    </div>
 
-  <h4 id="indice">Indice:</h4>
-  <strong>Lista de Skills primárias na área. LOGO ABAIXO</strong><br>
-  <a href="#lsSkillsSecundarias">Lista de Skills secundárias na área</a><br>
-  <a href="#lsSkillsOutras">Lista de outras Skills na área</a><br>
-  <a href="#lsSkillsCompetencias">Demais competências profissionais</a><br>
-  <a href="#siteInteresse">Site de interesse</a>
+    <div id="indice">
+      <h4>Indice:</h4>
+      <ul class="indice">
+        <li><strong>Skills primárias.ABAIXO</strong></li>
+        <li><a href="#SkillsSecundarias">Skills secundárias na área</a></li>
+        <li><a href="#SkillsOutras">Outras Skills na área</a></li>
+        <li><a href="#SkillsCompetencias">Demais competências profissionais</a></li>
+        <li><a href="#siteInteresse">Site de interesse</a></li>
+      </ul>
+    </div>
+  </header>
 
   <div id="divListaSkills">
-    <h2 id="lsSkillsDestaque">Lista de Skills destacadas na área:</h2>
-    <ul class="fundo-azul-escuro sombraDeCaixa lista-menor-centradas">
-      <li class="liSkillsDestaque lista-skills-fonte"><strong class="lista-destaques">C# avançado</strong></li>
-      <li class="liSkillsDestaque lista-skills-fonte">Python avançado</li>
-      <li class="liSkillsDestaque lista-skills-fonte">SQL</li>
-      <li class="liSkillsDestaque lista-skills-fonte">JavaScript intermediário</li>
-      <li class="liSkillsDestaque lista-skills-fonte">JQuery</li>
-      <li class="liSkillsDestaque lista-skills-fonte">Xamarin</li>
+    <h2 id="SkillsDestaque">Lista de Skills destacadas na área:</h2>
+    <ul id="ulSkillsDestaque" class="fundo-azul-escuro sombraDeCaixa">
+      <li><span>C# avançado</span></li>
+      <li>Python avançado</li>
+      <li>SQL</li>
+      <li>JavaScript intermediário</li>
+      <li>JQuery</li>
+      <li>Xamarin</li>
       <li><a href="#indice"><img class="formata-icones" src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a>
       </li>
     </ul>
 
-    <h2 id="lsSkillsSecundarias">Lista de Skills secundárias na área:</h2>
-    <ul class="fundo-azul-escuro sombraDeCaixa lista-menor-centradas">
-      <li class="liSkillsSecundarias lista-skills-fonte">Visual Basic</li>
-      <li class="liSkillsSecundarias lista-skills-fonte">VBA</li>
-      <li class="liSkillsSecundarias lista-skills-fonte">Delph's</li>
-      <li class="liSkillsSecundarias lista-skills-fonte">Visual Fox Pro</li>
-      <li class="liSkillsSecundarias lista-skills-fonte">C</li>
-      <li class="liSkillsSecundarias lista-skills-fonte">C++</li>
-      <li class="liSkillsSecundarias lista-skills-fonte">Visual C</li>
+    <h2 id="SkillsSecundarias">Lista de Skills secundárias na área:</h2>
+    <ul id="ulSkillsSecundarias" class="fundo-azul-escuro sombraDeCaixa">
+      <li>Visual Basic</li>
+      <li>VBA</li>
+      <li>Delph's</li>
+      <li>Visual Fox Pro</li>
+      <li>C</li>
+      <li>C++</li>
+      <li>Visual C</li>
       <li><a href="#indice"><img class="formata-icones" src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a>
       </li>
     </ul>
 
-    <h2 id="lsSkillsOutras">Lista de outras Skills:</h2>
-    <ul class="fundo-azul-escuro sombraDeCaixa lista-menor-centradas">
-      <li class="liDemaisSkills lista-skills-fonte">Html</li>
-      <li class="liDemaisSkills lista-skills-fonte">CSS</li>
-      <li class="liDemaisSkills lista-skills-fonte">ASP</li>
-      <li class="liDemaisSkills lista-skills-fonte">Access</li>
-      <li class="liDemaisSkills lista-skills-fonte">redes(básico)</li>
-      <li class="liDemaisSkills lista-skills-fonte">MS Office (amplo conhecimento em Excel)</li>
-      <li class="liDemaisSkills lista-skills-fonte">Crystal Reports</li>
-      <li class="liDemaisSkills lista-skills-fonte">Blender</li>
-      <li class="liDemaisSkills lista-skills-fonte">Corel Dream</li>
-      <li class="liDemaisSkills lista-skills-fonte">Photoshop</li>
+    <h2 id="SkillsOutras">Lista de outras Skills:</h2>
+    <ul class="fundo-azul-escuro sombraDeCaixa">
+      <li>Html</li>
+      <li>CSS</li>
+      <li>ASP</li>
+      <li>Access</li>
+      <li>redes(básico)</li>
+      <li>MS Office (amplo conhecimento em Excel)</li>
+      <li>Crystal Reports</li>
+      <li>Blender</li>
+      <li>Corel Dream</li>
+      <li>Photoshop</li>
       <li><a href="#indice"><img class="formata-icones" src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a>
       </li>
     </ul>
 
-    <h2 id="lsSkillsCompetencias">Demais Competências:</h2>
-    <ul class="fundo-azul-escuro sombraDeCaixa lista-menor-centradas">
-      <li class="liDemaisSkills lista-skills-fonte">Auditoria</li>
-      <li class="liDemaisSkills lista-skills-fonte">Pesquisa</li>
-      <li class="liDemaisSkills lista-skills-fonte">Monitoramento remoto</li>
-      <li class="liDemaisSkills lista-skills-fonte">Implementação de projetos</li>
-      <li class="liDemaisSkills lista-skills-fonte">Gerenciamento de serviços de TI</li>
-      <li class="liDemaisSkills lista-skills-fonte">Suporte técnico</li>
-      <li class="liDemaisSkills lista-skills-fonte">Relações públicas</li>
-      <li class="liDemaisSkills lista-skills-fonte">Produção de eventos</li>
+    <h2 id="SkillsCompetencias">Demais Competências:</h2>
+    <ul class="fundo-azul-escuro sombraDeCaixa">
+      <li>Auditoria</li>
+      <li>Pesquisa</li>
+      <li>Monitoramento remoto</li>
+      <li>Implementação de projetos</li>
+      <li>Gerenciamento de serviços de TI</li>
+      <li>Suporte técnico</li>
+      <li>Relações públicas</li>
+      <li>Produção de eventos</li>
       <li><a href="#indice"><img class="formata-icones" src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a>
       </li>
     </ul>
