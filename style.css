@@ -12,6 +12,8 @@ h1 {
   font-family: Grafite;
   font-weight: 80;
   font-size: xx-large;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 body {
@@ -46,13 +48,19 @@ header {
 #minhaFoto {
   background-color: crimson;
   padding: 5px;
-  width: 15%;
+  width: 12%;
+  margin-left: 10px;
   /* height: 250px;  */
 }
 
 #bannerDevWeb {
   height: 250px;
-  width: 75%;
+  max-width: 70%;
+  height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+  /* margin-right: 12%;
+  margin-left: 12%; */
 }
 
 #cabecalho {
@@ -102,6 +110,8 @@ header {
   font-family: CanetaPena;
   font-size: 30px;
   font-weight: 80;
+  margin-bottom: 1%;
+  margin-top: 0%;
 }
 
 .descricao-destaques {
