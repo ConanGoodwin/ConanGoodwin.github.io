@@ -157,11 +157,13 @@ header {
   text-align: right;
 }
 
-.indice {
-  max-width: 94%;
-  margin: 2%;
-  overflow-x: auto;
-  /* margin: auto; */
+.indice::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  text-align: justify;
+  background-color: black;
+  color: white;
 }
 
 .sombraDeCaixa {
