@@ -13,7 +13,6 @@ h3, h2 {
 }
 
 #cabecalho,
-#rodape,
 main,
 aside {
   margin-left: 1%;
@@ -35,9 +34,8 @@ aside {
 
 #rodape {
   height: 40px;
-  z-index: 3;
-  top: auto;
   padding: 5px;
+  margin: 7px;
   background-color: rgb(255, 171, 98);
 }
 
