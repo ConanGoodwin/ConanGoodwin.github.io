@@ -22,7 +22,7 @@ header {
 
 main {
   position: absolute;
-  top: 220px;
+  /* top: 220px; */
 }
 
 section {
@@ -41,6 +41,11 @@ ul {
 ul li {
   text-align: left;
   font-size: x-large;
+}
+
+#indice {
+  display: inline-block;
+  margin-bottom: 220px;
 }
 
 .imagens {
