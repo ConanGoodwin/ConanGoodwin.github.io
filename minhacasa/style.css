@@ -1,0 +1,28 @@
+* {
+  text-align: center;
+}
+
+head {
+  position: fixed;
+  z-index: 2;
+}
+
+main {
+  position: absolute;
+}
+
+ul {
+  margin-left: 10%;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+ul li {
+  text-align: left;
+  font-size: x-large;
+}
+
+.imagens {
+  width: 90%;
+  margin-bottom: 30px;
+}
