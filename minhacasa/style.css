@@ -1,5 +1,6 @@
 * {
   text-align: center;
+  margin: 0;
 }
 
 body {
@@ -11,22 +12,29 @@ h3 {
   margin-top: 20px;
 }
 
-head {
-  position: fixed;
+header {
+  width: 100%;
+  position:fixed;
   z-index: 2;
+  background-color: #F3E54F;
+  
 }
 
 main {
   position: absolute;
+  top: 220px;
 }
 
 section {
-  margin: 10px;
+  margin: 15px;
+  padding: 2px;
+  margin-right:  25px;
+  margin-bottom: 30px;
 }
 
 ul {
   margin-left: 10%;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 30px;
 }
 
@@ -37,6 +45,7 @@ ul li {
 
 .imagens {
   width: 90%;
+  margin-top: 10px;
   margin-bottom: 30px;
 }
 
