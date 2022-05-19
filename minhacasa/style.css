@@ -3,8 +3,19 @@
   margin: 0;
 }
 
+@font-face {
+  font-family: Faroeste;
+  src: url(./fontes/Quentincaps-owxKz.ttf);
+}
+
 body {
   background-color: #FAB947;
+}
+
+h1 {
+  font-family: Faroeste;
+  font-size:80px;
+  font-weight: 100;
 }
 
 h3 {
@@ -17,7 +28,7 @@ header {
   position:fixed;
   z-index: 2;
   background-color: #F3E54F;
-  
+  padding: 10px;
 }
 
 main {
@@ -45,7 +56,7 @@ ul li {
 
 #indice {
   display: inline-block;
-  margin-bottom: 220px;
+  margin-bottom: 280px;
 }
 
 .imagens {
