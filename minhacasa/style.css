@@ -43,6 +43,10 @@ section {
   margin-bottom: 30px;
 }
 
+p {
+  padding: 5px;
+}
+
 ul {
   margin-left: 10%;
   margin-top: 20px;
@@ -60,9 +64,10 @@ ul li {
 }
 
 .imagens {
-  width: 90%;
+  width: 95%;
   margin-top: 10px;
   margin-bottom: 30px;
+  margin-left: 25px;
 }
 
 .sombraDeCaixa {
