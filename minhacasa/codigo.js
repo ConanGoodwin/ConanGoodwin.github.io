@@ -1,7 +1,21 @@
 let divOnibusOculto = document.getElementById("onibusOculto");
-divOnibusOculto.style.display = "none";
 let divCarroOculto = document.getElementById("carroOculto");
+
+
 divCarroOculto.style.display = "none";
+divOnibusOculto.style.display = "none";
+acertaTopoIndice();
+window.onresize = function acertaTopoIndiceResize() {
+  acertaTopoIndice();
+}
+
+function acertaTopoIndice() {
+  let topoMain = document.getElementById("indice");
+  let tamanhoCabecalho = document.getElementsByTagName("header")[0];
+
+  topoMain.style.marginBottom = tamanhoCabecalho.offsetHeight + 10 + "px";
+  console.log(tamanhoCabecalho.offsetHeight + 10 + "px");
+}
 
 function escondeDiv(transporte) {
   let divTransporte = document.getElementById(transporte);
