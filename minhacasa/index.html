@@ -18,42 +18,51 @@
   </header>
 
   <main>
-    
+
 
     <p id="indice"></p>
     <nav>
       <ul>
-        <li><a href="#indice">Para quem vai de onibus</a></li>
+        <li><a href="#indice" onclick="escondeDivOnibus()">Para quem vai de onibus</a></li>
         <li>Para quem vai de carro via Tijuca/Rio cumprido</li>
       </ul>
     </nav>
-    <h2>ONIBUS</h2>
-    <section class="fundo-azul-escuro sombraDeCaixa">
-      <h3>Pegar os onibus 006 ou 007 na rua Gomes Freira, quase esquina com a Riachuelo, Lapa.</h3>
-      <img class="imagens" src="./imagens/gomesfreire.png" alt="ponto da gomes freire.">
-      <a href="#indice"><img class="formata-icones" src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a>
-    </section>
 
-    <section class="fundo-azul-escuro sombraDeCaixa">
-      <h3>Saltar no Largo do França(vai salta bem na cabine da policia de tijolinho) e virar a direita da cabine de
-        policia.</h3>
-      <img class="imagens" src="./imagens/largodofranca.png" alt="">
-      <a href="#indice"><img class="formata-icones" src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a>
-    </section>
+    <h2 class="linha-bloco">ONIBUS</h2>
+    <div id="onibus" class="onibus">
+      <section class="fundo-azul-escuro sombraDeCaixa">
+        <h3>Pegar os onibus 006 ou 007 na rua Gomes Freira, quase esquina com a Riachuelo, Lapa.</h3>
+        <img class="imagens" src="./imagens/gomesfreire.png" alt="ponto da gomes freire.">
+        <a href="#indice"><img class="formata-icones" src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a>
+      </section>
 
-    <section class="fundo-azul-escuro sombraDeCaixa">
-      <h3>Virar a esquerda, na Prefeito João Felipe(só segui a placa Laranjeira/Rio Cumprido)</h3>
-      <strong>ATENÇÃO:</strong> Não seguir em frente, entrada para a comunidade do Fallet!!!!
-      <img class="imagens" src="./imagens/pfelipevirada.png">
-      <a href="#indice"><img class="formata-icones" src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a>
-    </section>
+      <section class="fundo-azul-escuro sombraDeCaixa">
+        <h3>Saltar no Largo do França(vai salta bem na cabine da policia de tijolinho) e virar a direita da cabine de
+          policia.</h3>
+        <img class="imagens" src="./imagens/largodofranca.png" alt="">
+        <a href="#indice"><img class="formata-icones" src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a>
+      </section>
 
-    <section class="fundo-azul-escuro sombraDeCaixa">
-      <h3>Continuar em frente, meu predio é logo na curva, predio com escada em ponte.</h3>
-      <img class="imagens" src="./imagens/pfelipeabaixo.png">
-      <a href="#indice"><img class="formata-icones" src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a>
-    </section>
+      <section class="fundo-azul-escuro sombraDeCaixa">
+        <h3>Virar a esquerda, na Prefeito João Felipe(só segui a placa Laranjeira/Rio Cumprido)</h3>
+        <strong>ATENÇÃO:</strong> Não seguir em frente, entrada para a comunidade do Fallet!!!!
+        <img class="imagens" src="./imagens/pfelipevirada.png">
+        <a href="#indice"><img class="formata-icones" src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a>
+      </section>
+
+      <section class="fundo-azul-escuro sombraDeCaixa">
+        <h3>Continuar em frente, meu predio é logo na curva, predio com escada em ponte.</h3>
+        <img class="imagens" src="./imagens/pfelipeabaixo.png">
+        <a href="#indice"><img class="formata-icones" src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a>
+      </section>
+    </div>
+
+    <div id="decarro">
+      <p>TESESRESESESESTRS</p>
+    </div>
   </main>
 </body>
+
+<script src="./codigo.js"></script>
 
 </html>

@@ -77,3 +77,7 @@ ul li {
 .fundo-azul-escuro {
   background-color: #535D94;
 }
+
+.linha-bloco {
+  display: inline-block;
+}
