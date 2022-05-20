@@ -23,13 +23,21 @@
     <p id="indice"></p>
     <nav>
       <ul>
-        <li><a href="#indice" onclick="escondeDivOnibus()">Para quem vai de onibus</a></li>
-        <li>Para quem vai de carro via Tijuca/Rio cumprido</li>
+        <li>
+          <a href="#indice" onclick="escondeDiv('carro')">Para quem vai de onibus</a>
+          <img src="./Icones/visivel.png" class="olho onibusOlho" alt="" onclick="mostraEscondeDiv('onibus')">
+        </li>
+        <li>
+          <a href="#indice" onclick="escondeDiv('onibus')">Para quem vai de carro via Tijuca/Rio cumprido</a>
+          <img src="./Icones/visivel.png" class="olho carroOlho" alt="" onclick="mostraEscondeDiv('carro')">
+        </li>
       </ul>
     </nav>
 
     <h2 class="linha-bloco">ONIBUS</h2>
-    <div id="onibus" class="onibus">
+    <img src="./Icones/visivel.png" class="olho onibusOlho" alt="" onclick="mostraEscondeDiv('onibus')">
+
+    <div id="onibus">
       <section class="fundo-azul-escuro sombraDeCaixa">
         <h3>Pegar os onibus 006 ou 007 na rua Gomes Freira, quase esquina com a Riachuelo, Lapa.</h3>
         <img class="imagens" src="./imagens/gomesfreire.png" alt="ponto da gomes freire.">
@@ -56,9 +64,67 @@
         <a href="#indice"><img class="formata-icones" src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a>
       </section>
     </div>
+    <div id="onibusOculto" class="divOculto">
+      <p>Intinerário via Onibus oculto, clique no icone de "olho" para desocultar.</p>
+    </div>
 
-    <div id="decarro">
-      <p>TESESRESESESESTRS</p>
+    <hr>
+    <hr>
+    <hr>
+    <br>
+
+    <h2 class="linha-bloco">CARRO VIA TIJUCA</h2>
+    <img src="./Icones/visivel.png" class="olho carroOlho" alt="" onclick="mostraEscondeDiv('carro')">
+
+    <div id="carro">
+      <section class="fundo-azul-escuro sombraDeCaixa">
+        <h3>Pegar a rua Barão de Itapagipe(ela é paralela a Haddock Lobo) e bobrar a direita na rua do Bispo.</h3>
+        <img class="imagens" src="./imagens/baraodeitapagipe.png" alt="">
+        <a href="#indice"><img class="formata-icones" src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a>
+      </section>
+
+      <section class="fundo-azul-escuro sombraDeCaixa">
+        <h3>Seguir a rua do Bispo até o final, até ela cruzar a av. Paulo de Frontin.</h3>
+        <img class="imagens" src="./imagens/bispo.png" alt="">
+        <a href="#indice"><img class="formata-icones" src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a>
+      </section>
+
+      <section class="fundo-azul-escuro sombraDeCaixa">
+        <h3>Continuar reto ao passar pela av. Paulo de Frontin, <strong>pegando a rua Estrela</strong></h3>
+        <img class="imagens" src="./imagens/bispoestrela.png">
+        <a href="#indice"><img class="formata-icones" src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a>
+      </section>
+
+      <section class="fundo-azul-escuro sombraDeCaixa">
+        <h3>virar a direita na rua Barão de Petropolis</h3>
+        <img class="imagens" src="./imagens/estrela.png">
+        <a href="#indice"><img class="formata-icones" src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a>
+      </section>
+
+      <section class="fundo-azul-escuro sombraDeCaixa">
+        <h3>Seguir a Barão de Petropolis sem desviar dela, pegar a esquerda do tunel(imagem 02). NÃO pegar o tunel, ele vai para a rua Alice.</h3>
+        <h3>Após passar o tunel, a Barão de Petropolis vira rua Prefeito João Felipe(minha rua).</h3>
+        imagem 01
+        <img class="imagens" src="./imagens/barao01.png">
+        imagem 02
+        <img class="imagens" src="./imagens/barao02.png">
+        <a href="#indice"><img class="formata-icones" src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a>
+      </section>
+
+      <section class="fundo-azul-escuro sombraDeCaixa">
+        <h3>seguir a rua Prefeito João Felipe praticamente até o final dela.</h3>
+        <img class="imagens" src="./imagens/joaofelipe.png">
+        <a href="#indice"><img class="formata-icones" src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a>
+      </section>
+
+      <section class="fundo-azul-escuro sombraDeCaixa">
+        <h3>Depois de uma curva bem fechada, fica o meu prédio, numero 537, ap. 301-S</h3>
+        <img class="imagens" src="./imagens/pfelipeacima.png">
+        <a href="#indice"><img class="formata-icones" src="/Icones/Clockwise-arrow256_25064.png" alt="retorno"></a>
+      </section>
+    </div>
+    <div id="carroOculto" class="divOculto">
+      <p>Intinerário tijuca via carro oculto, clique no icone de "olho" para desocultar.</p>
     </div>
   </main>
 </body>
