@@ -1,14 +1,19 @@
 let divOnibusOculto = document.getElementById("onibusOculto");
 let divCarroOculto = document.getElementById("carroOculto");
 let spanCensura = document.getElementsByClassName("censura");
-let censurado = false;
+const urlParams = new URLSearchParams(window.location.search);
+const myParam = urlParams.get('name');
 
-if (censurado) {
-  for (let chave in spanCensura) {
-    spanCensura[chave].innerText = " <BLOQUEADO> ";
-    spanCensura[chave].src = "";
-    spanCensura[chave].alt = " <BLOQUEADO> ";
-  }
+function loadImage() {
+  // let senha = document.querySelector("#name").value;
+
+  // if (myParam != "churrasco") {
+  //   for (let chave in spanCensura) {
+  //     spanCensura[chave].innerText = " <BLOQUEADO> ";
+  //     spanCensura[chave].src = "";
+  //     spanCensura[chave].alt = " <BLOQUEADO> ";
+  //   }
+  // }
 }
 
 divCarroOculto.style.display = "none";
@@ -17,6 +22,20 @@ acertaTopoIndice();
 window.onresize = function acertaTopoIndiceResize() {
   acertaTopoIndice();
 };
+
+function desbloqueiaConteudo() {
+  let spanCensura = document.getElementsByClassName("censura");
+  let senha = document.querySelector("#name").value;
+
+  if (senha == "churrasco") {
+    console.log(senha);
+    for (let chave in spanCensura) {
+      spanCensura[chave].removeAttribute("innerText");
+      spanCensura[chave].removeAttribute("src");
+      spanCensura[chave].removeAttribute("alt");
+    }
+  }
+}
 
 function acertaTopoIndice() {
   let topoMain = document.getElementById("indice");

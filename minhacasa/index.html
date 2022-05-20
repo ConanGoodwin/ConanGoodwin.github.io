@@ -9,8 +9,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-
+<body onload="setaBloqueio()">
   <header>
     <h1>COMO CHEGAR</h1>
     <h2><span class="censura">Rua Prefeito João Felipe 537, Ap. 301-<strong>S</strong></span></h2>
@@ -19,6 +18,10 @@
 
   <main>
     <p id="indice"></p>
+    <form action="">
+      <input type="text" id="name" name="name">
+      <input type="submit" value="Enviar" onclick="desbloqueiaConteudo()">
+    </form>
     <nav>
       <ul>
         <li>
@@ -131,8 +134,9 @@
       <p>Intinerário tijuca via carro oculto, clique no icone de "olho" para desocultar.</p>
     </div>
   </main>
-</body>
 
-<script src="./codigo.js"></script>
+  <script src="./codigo.js"></script>
+  <link onload="loadImage()" rel="stylesheet" href="#indice">
+</body>
 
 </html>
