@@ -1,13 +1,22 @@
 let divOnibusOculto = document.getElementById("onibusOculto");
 let divCarroOculto = document.getElementById("carroOculto");
+let spanCensura = document.getElementsByClassName("censura");
+let censurado = false;
 
+if (censurado) {
+  for (let chave in spanCensura) {
+    spanCensura[chave].innerText = " <BLOQUEADO> ";
+    spanCensura[chave].src = "";
+    spanCensura[chave].alt = " <BLOQUEADO> ";
+  }
+}
 
 divCarroOculto.style.display = "none";
 divOnibusOculto.style.display = "none";
 acertaTopoIndice();
 window.onresize = function acertaTopoIndiceResize() {
   acertaTopoIndice();
-}
+};
 
 function acertaTopoIndice() {
   let topoMain = document.getElementById("indice");
@@ -35,11 +44,11 @@ function escondeDiv(transporte) {
   }
 
   if (divTransporte.style.display == "") {
-    atualizaOlho(transporte + "Olho","./Icones/invisivel.png");
+    atualizaOlho(transporte + "Olho", "./Icones/invisivel.png");
     divTransporte.style.display = "none";
     divOculto.style.display = "";
 
-    atualizaOlho(transporteInverso + "Olho","./Icones/visivel.png");
+    atualizaOlho(transporteInverso + "Olho", "./Icones/visivel.png");
     divTransporteInverso.style.display = "";
     divOcultoInverso.style.display = "none";
   }
