@@ -5,15 +5,15 @@ const urlParams = new URLSearchParams(window.location.search);
 const myParam = urlParams.get('name');
 
 function loadImage() {
-  // let senha = document.querySelector("#name").value;
+  let senha = document.querySelector("#name").value;
 
-  // if (myParam != "churrasco") {
-  //   for (let chave in spanCensura) {
-  //     spanCensura[chave].innerText = " <BLOQUEADO> ";
-  //     spanCensura[chave].src = "";
-  //     spanCensura[chave].alt = " <BLOQUEADO> ";
-  //   }
-  // }
+  if (myParam != "churrasco") {
+    for (let chave in spanCensura) {
+      spanCensura[chave].innerText = " <BLOQUEADO> ";
+      spanCensura[chave].src = "";
+      spanCensura[chave].alt = " <BLOQUEADO> ";
+    }
+  }
 }
 
 divCarroOculto.style.display = "none";
