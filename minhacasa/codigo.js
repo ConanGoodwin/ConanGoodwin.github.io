@@ -1,13 +1,9 @@
 let divOnibusOculto = document.getElementById("onibusOculto");
 let divCarroOculto = document.getElementById("carroOculto");
 let spanCensura = document.getElementsByClassName("censura");
-const urlParams = new URLSearchParams(window.location.search);
-const myParam = urlParams.get('name');
 
 function loadImage() {
-  let senha = document.querySelector("#name").value;
-
-  if (myParam != "churrasco") {
+  if (sessionStorage.getItem('senha') != "churrasco") {
     for (let chave in spanCensura) {
       spanCensura[chave].innerText = " <BLOQUEADO> ";
       spanCensura[chave].src = "";
@@ -19,16 +15,18 @@ function loadImage() {
 divCarroOculto.style.display = "none";
 divOnibusOculto.style.display = "none";
 acertaTopoIndice();
+document.getElementById("btnSenha").addEventListener("click",desbloqueiaConteudo);
 window.onresize = function acertaTopoIndiceResize() {
   acertaTopoIndice();
 };
 
-function desbloqueiaConteudo() {
-  let spanCensura = document.getElementsByClassName("censura");
-  let senha = document.querySelector("#name").value;
+function desbloqueiaConteudo(evento) {
+  sessionStorage.setItem('senha',document.getElementById('txtSenha').value)
+  let senha = sessionStorage.getItem('senha');
 
-  if (senha == "churrasco") {
+  if (senha === "churrasco") {
     console.log(senha);
+    evento.target.value = "DESBLOQUEADO";
     for (let chave in spanCensura) {
       spanCensura[chave].removeAttribute("innerText");
       spanCensura[chave].removeAttribute("src");
