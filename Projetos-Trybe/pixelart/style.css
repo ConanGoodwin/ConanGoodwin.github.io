@@ -1,0 +1,66 @@
+@font-face {
+  font-family: Grafite;
+  src: url(./fontes/AttackGraffiti-3zRBM.ttf);
+}
+
+body {
+  background-image: url(./imagens/pixelArt.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-size: 100% 100%;
+}
+
+h1 {
+  font-family: Grafite;
+  font-weight: lighter;
+  color: blue;
+}
+
+.margemCurta {
+  margin: 5px;
+}
+
+.black {
+  background-color: rgb(0, 0, 0);
+}
+
+.red {
+  background-color: rgb(255, 0, 0);
+}
+
+.green {
+  background-color: rgb(0, 255, 0);
+}
+
+.blue {
+  background-color: rgb(0, 0, 255);
+}
+
+.white {
+  background-color: rgb(255, 255, 255);
+}
+
+.color, #pincel, .pixel {
+  display: inline-block;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.color {
+  height: 50px;
+  width: 50px;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+}
+
+#pincel {
+  width: 20px;
+  height: 20px;
+}
+
+#pixel-board {
+  line-height: 0px;
+}
