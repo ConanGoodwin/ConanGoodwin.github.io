@@ -96,8 +96,8 @@ function recuperaLi() {
       listaTarefa.appendChild(tagLi);
       qtLista += 1;
     }
-    posicaoBotoesNav();
   }
+  posicaoBotoesNav();
 }
 
 function sobeLi() {
