@@ -1,0 +1,84 @@
+@font-face {
+  font-family: Titular;
+  src: url(./fontes/DigitaltsOrange-nRAPg.ttf);
+}
+
+body {
+  background-color: rgba(228, 184, 154, 0.482);
+}
+
+header {
+  width: 460px;
+  padding: 2px 10px 10px;
+  background-color: rgb(107, 184, 169);
+}
+
+h1 {
+  font-family: Titular;
+  text-align: center;
+  color: rgb(141, 43, 8);
+}
+
+main {
+  width: 460px;
+  min-height: 100px;
+}
+
+ol {
+  display: inline-block;
+  position:relative;
+  box-shadow: 10px 10px 10px 5px black;
+  margin: 10px;
+  margin-left: 120px;
+  padding: 5px 20px 10px 40px;
+  background-image: url(./imagens/folha_pautada.png);
+  background-repeat: no-repeat;
+  background-size: 108% 125%;
+  background-position: -10px -20px;
+}
+
+#texto-tarefa {
+  display: inline-block;
+  width: 90%;
+}
+
+#imgLapis {
+  position: absolute;
+  max-height: 300px;
+  margin-left: 5px;
+}
+
+#mover-cima, #mover-baixo {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  width: 34px;
+  height: 34px;
+  margin-left: 10px;
+  background-position: -2px 0px;
+}
+
+#mover-cima {
+  background-image: url(./icones/Arrow_Up_36952.png);
+}
+
+#mover-baixo {
+  background-image: url(./icones/Arrow_Down_36955.png);
+}
+
+#remover-selecionado {
+  margin-left: 90px;
+  margin-top: 5px;
+}
+
+.completed {
+  text-decoration: line-through solid rgb(0, 0, 0);
+}
+
+.marcado {
+  background-color: rgb(128, 128, 128);
+}
+
+.bordaEstlizadaBtn {
+  border-radius: 100%;
+}
