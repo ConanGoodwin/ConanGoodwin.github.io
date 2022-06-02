@@ -1,17 +1,27 @@
-const listaTarefa = document.getElementById('lista-tarefas');
-const todosLi = document.getElementsByTagName('li');
-const btnUp = document.getElementById('mover-cima');
-const btnDown = document.getElementById('mover-baixo');
-const meuModal = new bootstrap.Modal('#alertaModal');
+const listaTarefa = document.getElementById("lista-tarefas");
+const todosLi = document.getElementsByTagName("li");
+const btnUp = document.getElementById("mover-cima");
+const btnDown = document.getElementById("mover-baixo");
+const meuModal = new bootstrap.Modal("#alertaModal");
 let qtLista;
 
 function posicaoBotoesNav() {
-  const imgLapis = document.getElementById('imgLapis');
+  const imgLapis = document.getElementById("imgLapis");
 
-  btnUp.style.transform = `translateY(${-380 + 26 * qtLista}%)`;
-  btnDown.style.transform = `translateY(${-270 + 26 * qtLista}%)`;
-  imgLapis.style.transform = `translateY(${-1 + qtLista}%)`;
-  imgLapis.style.height = `${qtLista * 10 + 150}px`;
+  if (qtLista < 5) {
+    btnUp.style.transform = 'translateY(-370%)';
+    btnDown.style.transform = 'translateY(-260%)';
+  } else if (qtLista < 7) {
+    btnUp.style.transform = `translateY(${-410 + 17 * qtLista}%)`;
+    btnDown.style.transform = `translateY(${-300 + 17 * qtLista}%)`;
+  } else {
+    btnUp.style.transform = `translateY(${-400 + 26 * qtLista}%)`;
+    btnDown.style.transform = `translateY(${-290 + 26 * qtLista}%)`;
+  }
+  if (qtLista > 10) {
+    imgLapis.style.transform = `translateY(${-1 + qtLista}%)`;
+    imgLapis.style.height = `${qtLista * 10 + 150}px`;
+  }
 }
 
 function destacaTarefa(evento) {
@@ -19,31 +29,31 @@ function destacaTarefa(evento) {
 
   for (let index = 0; index < todosLi.length; index += 1) {
     todosLi[index].className = todosLi[index].className
-      .replace('marcado', '')
-      .replace(' ', '');
+      .replace("marcado", "")
+      .replace(" ", "");
   }
 
-  alvo.className += ' marcado';
+  alvo.className += " marcado";
 }
 
 function marcaTarefaCompleta(evento) {
   const alvo = evento.target;
 
-  if (!alvo.className.includes('completed')) {
-    alvo.className = 'completed';
+  if (!alvo.className.includes("completed")) {
+    alvo.className = "completed";
   } else {
-    alvo.className = '';
+    alvo.className = "";
   }
 }
 
 function addTarefa() {
-  const txtTarefa = document.getElementById('texto-tarefa');
-  const tagLi = document.createElement('li');
+  const txtTarefa = document.getElementById("texto-tarefa");
+  const tagLi = document.createElement("li");
 
-  tagLi.addEventListener('click', destacaTarefa);
-  tagLi.addEventListener('dblclick', marcaTarefaCompleta);
+  tagLi.addEventListener("click", destacaTarefa);
+  tagLi.addEventListener("dblclick", marcaTarefaCompleta);
   tagLi.innerText = txtTarefa.value;
-  txtTarefa.value = '';
+  txtTarefa.value = "";
 
   listaTarefa.appendChild(tagLi);
   qtLista += 1;
@@ -60,7 +70,7 @@ function apagaTodasLi() {
 
 function apagaLiRiscadas() {
   for (let index = 0; index < todosLi.length; index += 1) {
-    if (todosLi[index].className === 'completed') {
+    if (todosLi[index].className === "completed") {
       listaTarefa.removeChild(todosLi[index]);
       qtLista -= 1;
       index -= 1;
@@ -88,11 +98,11 @@ function recuperaLi() {
   qtLista = 0;
   if (localStorage.length > 0) {
     for (let index = 0; index < localStorage.length / 2; index += 1) {
-      const tagLi = document.createElement('li');
+      const tagLi = document.createElement("li");
       tagLi.innerHTML = localStorage.getItem(`txtLi${index}`);
       tagLi.className = localStorage.getItem(`classeLi${index}`);
-      tagLi.addEventListener('click', destacaTarefa);
-      tagLi.addEventListener('dblclick', marcaTarefaCompleta);
+      tagLi.addEventListener("click", destacaTarefa);
+      tagLi.addEventListener("dblclick", marcaTarefaCompleta);
       listaTarefa.appendChild(tagLi);
       qtLista += 1;
     }
@@ -101,7 +111,7 @@ function recuperaLi() {
 }
 
 function sobeLi() {
-  const tagTemp = document.querySelector('.marcado');
+  const tagTemp = document.querySelector(".marcado");
 
   if (tagTemp) {
     const tagInsercao = tagTemp.previousElementSibling;
@@ -113,7 +123,7 @@ function sobeLi() {
 }
 
 function desceLi() {
-  const tagTemp = document.querySelector('.marcado');
+  const tagTemp = document.querySelector(".marcado");
 
   if (tagTemp) {
     const tagInsercao = tagTemp.nextElementSibling;
@@ -127,7 +137,7 @@ function desceLi() {
 }
 
 function removeMarcado() {
-  const tagTemp = document.querySelector('.marcado');
+  const tagTemp = document.querySelector(".marcado");
 
   if (tagTemp) {
     listaTarefa.removeChild(tagTemp);
@@ -142,15 +152,17 @@ window.onload = function setaPagina() {
   recuperaLi();
 };
 
-document.getElementById('criar-tarefa').addEventListener('click', addTarefa);
-document.getElementById('apaga-tudo').addEventListener('click', apagaTodasLi);
+document.getElementById("criar-tarefa").addEventListener("click", addTarefa);
+document.getElementById("apaga-tudo").addEventListener("click", apagaTodasLi);
 document
-  .getElementById('remover-finalizados')
-  .addEventListener('click', apagaLiRiscadas);
-document.getElementById('salvar-tarefas').addEventListener('click', exibeModalSave);
-document.getElementById('btnSave').addEventListener('click', salvaLista);
-btnUp.addEventListener('click', sobeLi);
-btnDown.addEventListener('click', desceLi);
+  .getElementById("remover-finalizados")
+  .addEventListener("click", apagaLiRiscadas);
 document
-  .getElementById('remover-selecionado')
-  .addEventListener('click', removeMarcado);
+  .getElementById("salvar-tarefas")
+  .addEventListener("click", exibeModalSave);
+document.getElementById("btnSave").addEventListener("click", salvaLista);
+btnUp.addEventListener("click", sobeLi);
+btnDown.addEventListener("click", desceLi);
+document
+  .getElementById("remover-selecionado")
+  .addEventListener("click", removeMarcado);

@@ -29,6 +29,7 @@ ol {
   position:relative;
   box-shadow: 10px 10px 10px 5px black;
   width: 250px;
+  min-height: 110px;
   margin: 10px;
   margin-left: 80px;
   padding: 5px 20px 10px 40px;
@@ -49,7 +50,7 @@ li {
 
 #imgLapis {
   position: absolute;
-  max-width: 60px;
+  width: 60px;
   margin-left: 5px;
 }
 
