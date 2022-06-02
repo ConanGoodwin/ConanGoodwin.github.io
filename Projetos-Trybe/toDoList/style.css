@@ -19,7 +19,11 @@ h1 {
   margin-bottom: 20px;
 }
 
-main, footer, header {
+p {
+  text-align: center;
+}
+
+main, footer, header, div {
   display: flex;
   justify-content: center;
 }
@@ -42,7 +46,11 @@ li {
 
 #texto-tarefa {
   display: inline-block;
-  width: 90%;
+  width: 70%;
+}
+
+#containerBtnControle {
+  flex-wrap: wrap;
 }
 
 #imgLapis {
@@ -74,6 +82,10 @@ li {
 #remover-selecionado {
   margin: 10px 0 0 19px;
   height: 50px;
+}
+
+.btn {
+  margin: 5px 10px;
 }
 
 .completed {
