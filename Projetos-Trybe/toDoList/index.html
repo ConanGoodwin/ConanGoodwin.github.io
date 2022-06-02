@@ -14,24 +14,33 @@
 <body>
   <header>
     <h1>Minha Lista de Tarefas</h1>
-    <input type="text" name="" id="texto-tarefa" class="form-control" placeholder="Nova tarefa">
-    <button id="criar-tarefa" class="btn btn-primary">+</button>
+    <div>
+      <input type="text" name="" id="texto-tarefa" class="form-control" placeholder="Nova tarefa">
+      <button id="criar-tarefa" class="btn btn-primary">+</button>
+    </div>
     <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</p>
-    <button id="apaga-tudo" class="btn btn-danger">APAGA todas</button>
-    <button id="remover-finalizados" class="btn btn-warning">remove FINALIZADOS</button>
-    <button id="salvar-tarefas" class="btn btn-info">SALVAR lista</button>
+    <div>
+      <button id="apaga-tudo" class="btn btn-danger">APAGA</button>
+      <button id="remover-finalizados" class="btn btn-warning">remove FINALIZADOS</button>
+      <button id="salvar-tarefas" class="btn btn-info">SALVAR</button>
+    </div>
   </header>
 
   <main>
-    <img src="./imagens/lapis.png" alt="" id="imgLapis">
+    <div id="divLapis">
+      <img src="./imagens/lapis.png" alt="" id="imgLapis">
+    </div>
     <ol id="lista-tarefas">
     </ol>
-    <button id="mover-cima" class="bordaEstlizadaBtn"></button>
-    <button id="mover-baixo" class="bordaEstlizadaBtn"></button>
+    <div id="divNavLista">
+      <button id="mover-cima" class="bordaEstlizadaBtn"></button>
+      <button id="mover-baixo" class="bordaEstlizadaBtn"></button>
+    </div>
+    </div>
   </main>
 
   <footer>
-    <button id="remover-selecionado" class="btn btn-warning">remover item SELECIONADO</button>
+    <button id="remover-selecionado" class="btn btn-warning">remover SELECIONADO</button>
   </footer>
 
   <div id="alertaModal" class="modal" tabindex="-1">
@@ -43,7 +52,8 @@
         </div>
         <div class="modal-body">
           <p><strong>Atenção!</strong> A lista atual será salva na mamória, inclusive listas vazias,
-            <strong>substituindo qualquer lista previamente salva!</strong></p>
+            <strong>substituindo qualquer lista previamente salva!</strong>
+          </p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

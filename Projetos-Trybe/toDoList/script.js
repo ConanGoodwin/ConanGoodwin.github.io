@@ -8,16 +8,6 @@ let qtLista;
 function posicaoBotoesNav() {
   const imgLapis = document.getElementById("imgLapis");
 
-  if (qtLista < 5) {
-    btnUp.style.transform = 'translateY(-340%)';
-    btnDown.style.transform = 'translateY(-230%)';
-  } else if (qtLista < 7) {
-    btnUp.style.transform = `translateY(${-390 + 17 * qtLista}%)`;
-    btnDown.style.transform = `translateY(${-280 + 17 * qtLista}%)`;
-  } else {
-    btnUp.style.transform = `translateY(${-400 + 26 * qtLista}%)`;
-    btnDown.style.transform = `translateY(${-290 + 26 * qtLista}%)`;
-  }
   if (qtLista > 10) {
     imgLapis.style.transform = `translateY(${-1 + qtLista}%)`;
     imgLapis.style.height = `${qtLista * 10 + 150}px`;
