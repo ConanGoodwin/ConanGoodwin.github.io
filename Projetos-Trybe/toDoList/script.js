@@ -8,10 +8,7 @@ let qtLista;
 function posicaoBotoesNav() {
   const imgLapis = document.getElementById("imgLapis");
 
-  if (qtLista > 10) {
-    imgLapis.style.transform = `translateY(${-1 + qtLista}%)`;
-    imgLapis.style.height = `${qtLista * 10 + 150}px`;
-  }
+  imgLapis.style.height = `${qtLista * 10 + 150}px`;
 }
 
 function destacaTarefa(evento) {
