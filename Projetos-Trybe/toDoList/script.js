@@ -9,11 +9,11 @@ function posicaoBotoesNav() {
   const imgLapis = document.getElementById("imgLapis");
 
   if (qtLista < 5) {
-    btnUp.style.transform = 'translateY(-370%)';
-    btnDown.style.transform = 'translateY(-260%)';
+    btnUp.style.transform = 'translateY(-340%)';
+    btnDown.style.transform = 'translateY(-230%)';
   } else if (qtLista < 7) {
-    btnUp.style.transform = `translateY(${-410 + 17 * qtLista}%)`;
-    btnDown.style.transform = `translateY(${-300 + 17 * qtLista}%)`;
+    btnUp.style.transform = `translateY(${-390 + 17 * qtLista}%)`;
+    btnDown.style.transform = `translateY(${-280 + 17 * qtLista}%)`;
   } else {
     btnUp.style.transform = `translateY(${-400 + 26 * qtLista}%)`;
     btnDown.style.transform = `translateY(${-290 + 26 * qtLista}%)`;
