@@ -32,7 +32,7 @@ main, footer, header, div {
 
 ol {
   box-shadow: 10px 10px 10px 5px black;
-  min-width: 280px;
+  min-width: 250px;
   margin: 10px;
   padding: 5px 20px 10px 40px;
   background-image: url(./imagens/folha_pautada.png);
