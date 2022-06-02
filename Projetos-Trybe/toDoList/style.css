@@ -15,12 +15,14 @@ header {
 h1 {
   font-family: Titular;
   text-align: center;
+  font-size: 40px;
   color: rgb(141, 43, 8);
   margin-bottom: 20px;
 }
 
 p {
   text-align: center;
+  font-weight: bold;
 }
 
 main, footer, header, div {
