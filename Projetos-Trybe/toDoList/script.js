@@ -8,8 +8,8 @@ let qtLista;
 function posicaoBotoesNav() {
   const imgLapis = document.getElementById('imgLapis');
 
-  btnUp.style.transform = `translateY(${-380 + 20 * qtLista}%)`;
-  btnDown.style.transform = `translateY(${-270 + 20 * qtLista}%)`;
+  btnUp.style.transform = `translateY(${-380 + 26 * qtLista}%)`;
+  btnDown.style.transform = `translateY(${-270 + 26 * qtLista}%)`;
   imgLapis.style.transform = `translateY(${-1 + qtLista}%)`;
   imgLapis.style.height = `${qtLista * 10 + 150}px`;
 }
