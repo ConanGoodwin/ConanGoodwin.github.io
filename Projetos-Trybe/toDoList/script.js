@@ -3,6 +3,8 @@ const todosLi = document.getElementsByTagName("li");
 const btnUp = document.getElementById("mover-cima");
 const btnDown = document.getElementById("mover-baixo");
 const meuModal = new bootstrap.Modal("#alertaModal");
+const txtCorpoModal = document.querySelector(".modal-body").children[0];
+let seSalvarLista = false;
 let qtLista;
 
 function posicaoBotoesNav() {
@@ -66,7 +68,18 @@ function apagaLiRiscadas() {
   posicaoBotoesNav();
 }
 
-function exibeModalSave() {
+function exibeModal(evento) {
+  const alvo = evento.target;
+
+  if (alvo.id === "salvar-tarefas") {
+    txtCorpoModal.innerHTML =
+      '<span style="color: red;">Atenção!</span> A lista atual será salva na memória, inclusive listas vazias, <span style="color: red;">substituindo qualquer lista previamente salva!</span>';
+    seSalvarLista = true;
+  } else {
+    txtCorpoModal.innerHTML =
+      '<span style="color: red;">Atenção!</span> Caso confirme a alteração, a lista atual será toda apagada, <span style="color: red;">mas as alterações não ficarão gravadas na memória!</span>';
+    salvaLista = false;
+  }
   meuModal.show();
 }
 
@@ -76,6 +89,14 @@ function salvaLista() {
   for (let index = 0; index < todosLi.length; index += 1) {
     localStorage.setItem(`txtLi${index}`, todosLi[index].innerText);
     localStorage.setItem(`classeLi${index}`, todosLi[index].className);
+  }
+}
+
+function btnModalSave() {
+  if (seSalvarLista) {
+    salvaLista();
+  } else {
+    apagaTodasLi();
   }
 
   meuModal.hide();
@@ -140,14 +161,12 @@ window.onload = function setaPagina() {
 };
 
 document.getElementById("criar-tarefa").addEventListener("click", addTarefa);
-document.getElementById("apaga-tudo").addEventListener("click", apagaTodasLi);
+document.getElementById("apaga-tudo").addEventListener("click", exibeModal);
 document
   .getElementById("remover-finalizados")
   .addEventListener("click", apagaLiRiscadas);
-document
-  .getElementById("salvar-tarefas")
-  .addEventListener("click", exibeModalSave);
-document.getElementById("btnSave").addEventListener("click", salvaLista);
+document.getElementById("salvar-tarefas").addEventListener("click", exibeModal);
+document.getElementById("btnSave").addEventListener("click", btnModalSave);
 btnUp.addEventListener("click", sobeLi);
 btnDown.addEventListener("click", desceLi);
 document
