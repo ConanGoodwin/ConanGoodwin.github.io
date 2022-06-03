@@ -32,17 +32,18 @@ main, footer, header, div {
 
 ol {
   box-shadow: 10px 10px 10px 5px black;
-  min-width: 250px;
+  width: 70%;
   margin: 10px;
   padding: 5px 20px 10px 40px;
-  background-image: url(./imagens/folha_pautada.png);
-  background-repeat: no-repeat;
-  background-size: 109% 125%;
-  background-position: -20px -28px;
+  background: url(./imagens/borda.png) no-repeat, url(./imagens/folha_pautada.png) no-repeat;
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  background-repeat: repeat-y;
+  /* background-position: -20px -28px; */
 }
 
 li {
-  margin-left: 10px;
+  margin-left: 25px;
 }
 
 #texto-tarefa {
