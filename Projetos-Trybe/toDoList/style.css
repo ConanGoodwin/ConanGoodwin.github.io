@@ -36,10 +36,7 @@ ol {
   margin: 10px;
   padding: 5px 20px 10px 40px;
   background: url(./imagens/borda.png) no-repeat, url(./imagens/folha_pautada.png) no-repeat;
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
   background-repeat: repeat-y;
-  /* background-position: -20px -28px; */
 }
 
 li {
