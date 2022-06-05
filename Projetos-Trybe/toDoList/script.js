@@ -16,8 +16,10 @@ function destacaTarefa(evento) {
   atualMarcado = document.querySelector(".marcado");
 
   if (atualMarcado !== null) {
-    if (alvo.className.includes('marcado') === true) {
-      txtTarefa.value = "";
+    if (alvo.className.includes("marcado") === true) {
+      if (alvo.innerText === txtTarefa.value) {
+        txtTarefa.value = "";
+      }
       btnAttTarefa.innerText = "+";
       alvo.classList.remove("marcado");
       return false;
