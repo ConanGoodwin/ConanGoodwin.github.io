@@ -100,7 +100,7 @@ function exibeModal(evento) {
   } else {
     txtCorpoModal.innerHTML =
       '<span style="color: red;">Atenção!</span> Caso confirme a alteração, a lista atual será toda apagada, <span style="color: red;">mas as alterações não ficarão gravadas na memória!</span>';
-    salvaLista = false;
+    seSalvarLista = false;
   }
   meuModal.show();
 }
