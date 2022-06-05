@@ -62,7 +62,7 @@ li {
   margin-left: 5px;
 }
 
-#divNavLista, #divLapis, header {
+#divNavLista, header {
   display:flex;
   flex-direction: column;
   justify-content: center;

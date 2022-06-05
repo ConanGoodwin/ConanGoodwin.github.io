@@ -1,28 +1,27 @@
+const txtTarefa = document.getElementById("texto-tarefa");
+const btnAttTarefa = document.getElementById("criar-tarefa");
 const listaTarefa = document.getElementById("lista-tarefas");
 const todosLi = document.getElementsByTagName("li");
 const btnUp = document.getElementById("mover-cima");
 const btnDown = document.getElementById("mover-baixo");
 const meuModal = new bootstrap.Modal("#alertaModal");
 const txtCorpoModal = document.querySelector(".modal-body").children[0];
+let atualMarcado = document.querySelector(".marcado");
 let seSalvarLista = false;
 let qtLista;
-
-function posicaoBotoesNav() {
-  const imgLapis = document.getElementById("imgLapis");
-
-  imgLapis.style.height = `${qtLista * 10 + 150}px`;
-}
+let indiceElementoLista;
 
 function destacaTarefa(evento) {
   const alvo = evento.target;
+  atualMarcado = document.querySelector(".marcado");
 
-  for (let index = 0; index < todosLi.length; index += 1) {
-    todosLi[index].className = todosLi[index].className
-      .replace("marcado", "")
-      .replace(" ", "");
+  if (atualMarcado !== null) {
+    atualMarcado.classList.remove("marcado");
   }
 
   alvo.className += " marcado";
+  txtTarefa.value = alvo.innerText;
+  btnAttTarefa.innerText = '#'
 }
 
 function marcaTarefaCompleta(evento) {
@@ -36,7 +35,6 @@ function marcaTarefaCompleta(evento) {
 }
 
 function addTarefa() {
-  const txtTarefa = document.getElementById("texto-tarefa");
   const tagLi = document.createElement("li");
 
   tagLi.addEventListener("click", destacaTarefa);
@@ -46,7 +44,28 @@ function addTarefa() {
 
   listaTarefa.appendChild(tagLi);
   qtLista += 1;
-  posicaoBotoesNav();
+}
+
+function atualizaTarefa() {
+  atualMarcado = document.querySelector(".marcado");
+
+  atualMarcado.innerText = txtTarefa.value;
+  txtTarefa.value = '';
+  atualMarcado.classList.remove('marcado');
+  btnAttTarefa.innerText = '+';
+}
+
+function defineAttTarefa(evento) {
+  const alvo = evento.target;
+  atualMarcado = document.querySelector(".marcado");
+  
+  if (atualMarcado !== null) {
+    if (alvo.innerText === '#') {
+      atualizaTarefa();
+    }
+  } else {
+    addTarefa();
+  }
 }
 
 function apagaTodasLi() {
@@ -54,7 +73,6 @@ function apagaTodasLi() {
     listaTarefa.removeChild(todosLi[0]);
     qtLista -= 1;
   }
-  posicaoBotoesNav();
 }
 
 function apagaLiRiscadas() {
@@ -65,7 +83,6 @@ function apagaLiRiscadas() {
       index -= 1;
     }
   }
-  posicaoBotoesNav();
 }
 
 function exibeModal(evento) {
@@ -115,7 +132,6 @@ function recuperaLi() {
       qtLista += 1;
     }
   }
-  posicaoBotoesNav();
 }
 
 function sobeLi() {
@@ -145,12 +161,14 @@ function desceLi() {
 }
 
 function removeMarcado() {
-  const tagTemp = document.querySelector(".marcado");
+  // const tagTemp = document.querySelector(".marcado");
+  atualMarcado = document.querySelector(".marcado");
 
-  if (tagTemp) {
-    listaTarefa.removeChild(tagTemp);
+  if (atualMarcado) {
+    listaTarefa.removeChild(atualMarcado);
     qtLista -= 1;
-    posicaoBotoesNav();
+    txtTarefa.value = '';
+    btnAttTarefa.innerText = '+';
   }
 }
 
@@ -160,7 +178,7 @@ window.onload = function setaPagina() {
   recuperaLi();
 };
 
-document.getElementById("criar-tarefa").addEventListener("click", addTarefa);
+btnAttTarefa.addEventListener("click", defineAttTarefa);
 document.getElementById("apaga-tudo").addEventListener("click", exibeModal);
 document
   .getElementById("remover-finalizados")
