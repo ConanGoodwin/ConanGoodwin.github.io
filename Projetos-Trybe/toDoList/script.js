@@ -16,12 +16,18 @@ function destacaTarefa(evento) {
   atualMarcado = document.querySelector(".marcado");
 
   if (atualMarcado !== null) {
+    if (alvo.className.includes('marcado') === true) {
+      txtTarefa.value = "";
+      btnAttTarefa.innerText = "+";
+      alvo.classList.remove("marcado");
+      return false;
+    }
     atualMarcado.classList.remove("marcado");
   }
 
   alvo.className += " marcado";
   txtTarefa.value = alvo.innerText;
-  btnAttTarefa.innerText = '#'
+  btnAttTarefa.innerText = "#";
 }
 
 function marcaTarefaCompleta(evento) {
@@ -50,19 +56,16 @@ function atualizaTarefa() {
   atualMarcado = document.querySelector(".marcado");
 
   atualMarcado.innerText = txtTarefa.value;
-  txtTarefa.value = '';
-  atualMarcado.classList.remove('marcado');
-  btnAttTarefa.innerText = '+';
+  txtTarefa.value = "";
+  atualMarcado.classList.remove("marcado");
+  btnAttTarefa.innerText = "+";
 }
 
 function defineAttTarefa(evento) {
   const alvo = evento.target;
-  atualMarcado = document.querySelector(".marcado");
-  
-  if (atualMarcado !== null) {
-    if (alvo.innerText === '#') {
-      atualizaTarefa();
-    }
+
+  if (alvo.innerText === "#") {
+    atualizaTarefa();
   } else {
     addTarefa();
   }
@@ -161,14 +164,26 @@ function desceLi() {
 }
 
 function removeMarcado() {
-  // const tagTemp = document.querySelector(".marcado");
   atualMarcado = document.querySelector(".marcado");
 
   if (atualMarcado) {
     listaTarefa.removeChild(atualMarcado);
     qtLista -= 1;
-    txtTarefa.value = '';
-    btnAttTarefa.innerText = '+';
+    txtTarefa.value = "";
+    btnAttTarefa.innerText = "+";
+  }
+}
+
+function verificaTxtTarefa(evento) {
+  const alvo = evento.target;
+  atualMarcado = document.querySelector(".marcado");
+
+  if (alvo.value === "") {
+    btnAttTarefa.innerText = "+";
+  } else {
+    if (atualMarcado) {
+      btnAttTarefa.innerText = "#";
+    }
   }
 }
 
@@ -178,6 +193,7 @@ window.onload = function setaPagina() {
   recuperaLi();
 };
 
+txtTarefa.addEventListener("keyup", verificaTxtTarefa);
 btnAttTarefa.addEventListener("click", defineAttTarefa);
 document.getElementById("apaga-tudo").addEventListener("click", exibeModal);
 document
