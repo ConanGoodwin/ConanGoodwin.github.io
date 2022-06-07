@@ -103,3 +103,28 @@ li {
 .bordaEstlizadaBtn {
   border-radius: 100%;
 }
+
+@media screen and (max-width: 400px) {
+  main {
+    width: 100%;
+  }
+  
+  #imgLapis {
+    width: 30px;
+    margin: 0;
+  }
+
+  ol {
+    width: 75%;
+    padding: 5px 5px 5px 30px;
+  }
+
+  #divNavLista {
+    width: 7%;
+  }
+
+  #mover-cima, #mover-baixo {
+    margin: 0px;
+    margin-bottom: 15px;
+  }
+}
