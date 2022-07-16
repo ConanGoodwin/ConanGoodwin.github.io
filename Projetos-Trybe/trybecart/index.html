@@ -28,7 +28,24 @@
       </div>
     </header>
     <section class="containerPrincipal">
-      <p class="loading">carregando...</p>
+      <div class="loading">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+      <form class="row g-3" method="get">
+        <div class="col-auto">
+          <label for="staticEmail2" class="visually-hidden">Email</label>
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Palavra chave filtro:">
+        </div>
+        <div class="col-auto">
+          <label for="inputFiltro" class="visually-hidden">Filtro</label>
+          <input type="text" class="form-control" id="inputFiltro" name="filtro" placeholder="Computador">
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-success mb-3">mudar filtro</button>
+        </div>
+      </form>
       <section class="items"></section>
       <section class="cart">
         <ul class="cart__items"></ul>
