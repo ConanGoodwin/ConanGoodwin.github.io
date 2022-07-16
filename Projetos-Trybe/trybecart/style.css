@@ -174,7 +174,7 @@ body {
 }
 
 .pTotal {
-  margin: 10px 25%;
+  margin: 10px 25% 20px;
   padding: 5px;
   background-color: rgb(4, 4, 61);
   color: white;
