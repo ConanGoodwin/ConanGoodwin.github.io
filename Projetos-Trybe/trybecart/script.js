@@ -17,14 +17,14 @@ const createCustomElement = (element, className, innerText) => {
   return e;
 };
 
-const createProductItemElement = ({ id, title, thumbnail }) => {
+const createProductItemElement = ({ id, title, thumbnail, price }) => {
   const section = document.createElement('section');
 
-  section.className = 'item';
+  section.className = 'item card';
   section.appendChild(createCustomElement('span', 'item__sku', id));
   section.appendChild(createCustomElement('span', 'item__title', title));
   section.appendChild(createProductImageElement(thumbnail));
-  section.appendChild(createCustomElement('button', 'item__add', 'Adicionar ao carrinho!'));
+  section.appendChild(createCustomElement('button', 'item__add btn', 'Adicionar ao carrinho!'));
 
   return section;
 };
@@ -49,11 +49,9 @@ const remArrayPrecos = (texto) => {
 
 const cartItemClickListener = async (event) => {
   // coloque seu código aqui
-  const pai = event.target.parentElement;
-
   await remArrayPrecos(formataTextoLi(event.target.innerText));
   await totalizaCarrinho();
-  pai.removeChild(event.target);
+  carrinho.removeChild(event.target);
   saveCartItems(carrinho);
 };
 
@@ -62,11 +60,17 @@ const addArrayPrecos = (texto) => {
   precosCarrinho.push(objeto);
 };
 
-const createCartItemElement = ({ id, title, price }) => {
+const createCartItemElement = ({ id, title, price, thumbnail }) => {
   const li = document.createElement('li');
+  const liImage = document.createElement('img');
+  const p1 = document.createElement('div');
 
   li.className = 'cart__item';
-  li.innerText = `SKU: ${id} | NAME: ${title} | PRICE: $${price}`;
+  liImage.src = thumbnail;
+  li.appendChild(liImage);
+  p1.innerText = `SKU: ${id}`
+  li.appendChild(p1);
+  li.innerHTML += `${title} | <span class='spanPrice'>PRICE: R$ ${price}</span>`;
   li.addEventListener('click', cartItemClickListener);
   addArrayPrecos(li.innerText);
 
@@ -102,7 +106,7 @@ function montaEventoBtnAddCarrinho() {
   btnAddCarrinho.forEach((btn) => btn.addEventListener('click', addItemCar));
 }
 
-async function montaCarrinho() {
+async function montaCarrinhoInicial() {
   const newList = getSavedCartItems();
   carrinho.innerHTML = newList;
   const lisCarrinho = document.getElementsByClassName('cart__item');
@@ -113,9 +117,32 @@ async function montaCarrinho() {
   }
 }
 
+const showUnshowCart = () => {
+  const menuCarrinho = document.querySelector('.container-cartTitle');
+  const cabecalho = document.querySelector('.container-title');
+  const corpoCarrinho = document.querySelector('.cart');
+  const corpoPrincipal = document.querySelector('.items');
+
+  if (menuCarrinho.style.display !== 'none') {
+    menuCarrinho.style.display = 'none';
+    cabecalho.style.width = '100%';
+    corpoCarrinho.style.display = 'none';
+    corpoPrincipal.style.flexBasis = '100%';
+    corpoPrincipal.style.marginRight = '0';
+  } else {
+    menuCarrinho.style.display = 'flex';
+    cabecalho.style.width = '80%';
+    corpoCarrinho.style.display = 'flex';
+    corpoPrincipal.style.flexBasis = '70%';
+    corpoPrincipal.style.marginRight = '32%';
+  }
+};
+
 window.onload = async () => {
+  const iconeCarrinho = document.querySelector('.material-icons');
+
   await montaListaProdutos();
-  await montaCarrinho();
+  await montaCarrinhoInicial();
   await montaEventoBtnAddCarrinho();
   btnLimparCarrinho.addEventListener('click', () => {
     carrinho.innerHTML = '';
@@ -123,5 +150,7 @@ window.onload = async () => {
     totalizaCarrinho();
     saveCartItems(carrinho);
   });
+  iconeCarrinho.addEventListener('click', showUnshowCart);
   totalizaCarrinho();
 };
+//codando

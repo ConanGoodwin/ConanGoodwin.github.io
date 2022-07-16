@@ -5,17 +5,23 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: fontIcone;
+  src: url(./Fontes/469IconsFonts-zWy0.ttf);
+}
+
 body {
   background-color: rgb(246, 246, 246);
 }
 
 .header {
-  position: relative;
+  position: fixed;
   background-color: rgb(3, 52, 45);
   display: flex;
   align-items: center;
   width: 100%;
   height: 60px;
+  z-index: 1;
 }
 
 .container-title {
@@ -73,10 +79,11 @@ body {
   font-weight: 700;
 }
 
-.container {
+.containerPrincipal {
   display: flex;
-  justify-content: space-around;
+  justify-content: right;
   width: 100%;
+  padding-top: 60px;
 }
 
 .title strong {
@@ -89,6 +96,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   margin: 40px 0;
+  margin-right: 32%;
 }
 
 .item {
@@ -133,11 +141,37 @@ body {
   flex-flow: column wrap;
   background-color: rgb(241, 241, 238);
   height: 100vh;
+  position: fixed;
+  width: 32%;
 }
 
 .cart .cart__items {
-  height: 500px;
+  height: 450px;
   overflow-y: scroll;
+}
+
+.cart__item {
+  padding-left: 5px;
+  border: 2px solid rgb(206, 206, 205);
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 5px 0;
+}
+
+.cart__item img {
+  float: left;
+}
+
+.cart__item div {
+  display: flex;
+}
+
+.spanPrice {
+  color: red;
+}
+
+.pTotal {
+  margin: 10px;
 }
 
 .empty-cart {
@@ -146,4 +180,11 @@ body {
   margin: 0 auto;
   border: 2px solid rgb(5, 52, 219);
   background-color: rgb(249, 249, 246);
+}
+
+ul li::marker {
+  font-family: fontIcone;
+  /* content: "♻️"; */
+  content: "Ú";
+  color: blue;
 }
