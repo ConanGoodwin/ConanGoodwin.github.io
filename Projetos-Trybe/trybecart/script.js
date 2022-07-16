@@ -31,10 +31,27 @@ const createProductItemElement = ({ id, title, thumbnail, price }) => {
 
 // const getSkuFromProductItem = (item) => item.querySelector('span.item__sku').innerText;
 
+const round = (num, places) => {
+	if (!("" + num).includes("e")) {
+		return +(Math.round(num + "e+" + places)  + "e-" + places);
+	} else {
+		let arr = ("" + num).split("e");
+		let sig = ""
+		if (+arr[1] + places > 0) {
+			sig = "+";
+		}
+
+		return +(Math.round(+arr[0] + "e" + sig + (+arr[1] + places)) + "e-" + places);
+	}
+}
+
 const totalizaCarrinho = () => {
   const totalCarrinho = document.querySelector('.total-price');
+  let resultado = precosCarrinho.reduce((acc, curr) => acc + parseFloat(curr), 0);
+  resultado = round(resultado, 2);
+  resultado = resultado.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
 
-  totalCarrinho.innerText = precosCarrinho.reduce((acc, curr) => acc + parseFloat(curr), 0);
+  totalCarrinho.innerText = resultado;
 };
 
 const formataTextoLi = (texto) => {
