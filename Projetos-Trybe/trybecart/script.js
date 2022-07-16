@@ -134,7 +134,7 @@ const showUnshowCart = () => {
     cabecalho.style.width = '80%';
     corpoCarrinho.style.display = 'flex';
     corpoPrincipal.style.flexBasis = '70%';
-    corpoPrincipal.style.marginRight = '32%';
+    corpoPrincipal.style.marginRight = '31.5%';
   }
 };
 
