@@ -21,7 +21,7 @@ body {
   align-items: center;
   width: 100%;
   height: 60px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .container-title {
@@ -81,7 +81,9 @@ body {
 
 .containerPrincipal {
   display: flex;
+  flex-direction: column;
   justify-content: right;
+  align-items: flex-end;
   width: 100%;
   padding-top: 60px;
 }
@@ -95,7 +97,7 @@ body {
   flex-basis: 70%;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 40px 0;
+  margin: 60px 0;
   margin-right: 32%;
 }
 
@@ -104,7 +106,7 @@ body {
   flex-direction: column;
   height: auto;
   margin: 5px;
-  width: 200px;
+  width: 210px;
   border: 2px solid rgb(234, 234, 233);
   border-radius: 5px;
   box-sizing: border-box;
@@ -143,6 +145,7 @@ body {
   height: 100vh;
   position: fixed;
   width: 31.5%;
+  z-index: 3;
 }
 
 .cart .cart__items {
@@ -187,4 +190,12 @@ ul li::marker {
   /* content: "♻️"; */
   content: "Ú";
   color: blue;
+}
+
+form {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+  padding-top: 10px;
 }

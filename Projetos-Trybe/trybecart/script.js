@@ -1,6 +1,7 @@
 const classeCarrinho = '.cart__items';
 const carrinho = document.querySelector(classeCarrinho);
 const btnLimparCarrinho = document.querySelector('.empty-cart');
+let chaveFiltro = '';
 let precosCarrinho = [];
 
 const createProductImageElement = (imageSource) => {
@@ -20,7 +21,7 @@ const createCustomElement = (element, className, innerText) => {
 const createProductItemElement = ({ id, title, thumbnail, price }) => {
   const section = document.createElement('section');
 
-  section.className = 'item card';
+  section.className = 'item card shadow p-3 mb-5 bg-body rounded';
   section.appendChild(createCustomElement('span', 'item__sku', id));
   section.appendChild(createCustomElement('span', 'item__title', title));
   section.appendChild(createProductImageElement(thumbnail));
@@ -106,9 +107,11 @@ async function addItemCar(event) {
 
 async function montaListaProdutos() {
   const carregando = document.querySelector('.loading');
-  const dados = await fetchProducts('computador');
-  carregando.parentElement.removeChild(carregando);
+  carregando.style.display = 'flex';
+  const dados = await fetchProducts(chaveFiltro);
+  carregando.style.display = 'none';
   const telaProdutos = document.querySelector('.items');
+  telaProdutos.innerHTML = '';
 
   dados.results.forEach((item) => {
     const produto = createProductItemElement(item);
@@ -157,6 +160,11 @@ const showUnshowCart = () => {
 
 window.onload = async () => {
   const iconeCarrinho = document.querySelector('.material-icons');
+  const txtFiltro = document.querySelector('#inputFiltro');
+  const param = new URLSearchParams(window.location.search);
+  chaveFiltro = param.get('filtro');
+  txtFiltro.value = chaveFiltro;
+  if (!chaveFiltro) chaveFiltro = 'computador';
 
   await montaListaProdutos();
   await montaCarrinhoInicial();
