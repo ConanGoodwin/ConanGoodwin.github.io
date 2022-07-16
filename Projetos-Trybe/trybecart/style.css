@@ -149,7 +149,7 @@ body {
 }
 
 .cart .cart__items {
-  height: 450px;
+  height: 420px;
   overflow-y: scroll;
 }
 
