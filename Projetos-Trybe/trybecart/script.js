@@ -82,15 +82,22 @@ const createCartItemElement = ({ id, title, price, thumbnail }) => {
   const li = document.createElement('li');
   const liImage = document.createElement('img');
   const p1 = document.createElement('div');
+  const p2 = document.createElement('div');
+  const p3 = document.createElement('div');
 
   li.className = 'cart__item';
   liImage.src = thumbnail;
   li.appendChild(liImage);
   p1.innerText = `SKU: ${id}`
   li.appendChild(p1);
-  li.innerHTML += `${title} | <span class='spanPrice'>PRICE: R$ ${price}</span>`;
+  p2.innerText = `${title} | `
+  li.appendChild(p2);
+  precosCarrinho.push(price);
+  price = round(price, 2);
+  price = price.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
+  p3.innerHTML = `<span class='spanPrice'>PRICE: R$ ${price}</span>`;
+  li.appendChild(p3);
   li.addEventListener('click', cartItemClickListener);
-  addArrayPrecos(li.innerText);
 
   return li;
 };

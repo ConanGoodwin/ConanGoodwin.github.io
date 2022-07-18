@@ -211,3 +211,16 @@ form {
   margin-top: 10px;
 }
 
+.qtCarrinho {
+  display: flex;
+  z-index: 4;
+  align-content: center;
+  font-size: small;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  background-color: white;
+  border-radius: 100%;
+  margin-top: 20px;
+}
+
