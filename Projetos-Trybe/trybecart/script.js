@@ -65,7 +65,7 @@ const formataTextoLi = (texto) => {
 };
 
 const remArrayPrecos = (texto) => {
-  if (precosCarrinho.indexOf(parseFloat(texto)) > -1) precosCarrinho.splice(precosCarrinho.indexOf(texto), 1);
+  if (precosCarrinho.indexOf(parseFloat(texto)) > -1) precosCarrinho.splice(precosCarrinho.indexOf(parseFloat(texto)), 1);
 };
 
 const cartItemClickListener = async (event) => {
@@ -73,6 +73,7 @@ const cartItemClickListener = async (event) => {
   await remArrayPrecos(formataTextoLi(event.target.innerText));
   await totalizaCarrinho();
   carrinho.removeChild(event.target);
+  qtCarrinho.innerText = parseInt(qtCarrinho.innerText) - 1;
   saveCartItems(carrinho);
 };
 
@@ -111,6 +112,7 @@ async function addItemCar(event) {
   const itemAdd = await fetchItem(idProduto);
 
   carrinho.appendChild(createCartItemElement(itemAdd));
+  qtCarrinho.innerText = parseInt(qtCarrinho.innerText) + 1;
   totalizaCarrinho();
   saveCartItems(carrinho);
 }
@@ -143,6 +145,7 @@ async function montaCarrinhoInicial() {
 
   for (let index = 0; index < lisCarrinho.length; index += 1) {
     lisCarrinho[index].addEventListener('click', cartItemClickListener);
+    qtCarrinho.innerText = parseInt(qtCarrinho.innerText) + 1;
     addArrayPrecos(lisCarrinho[index].innerText);
   }
 }
@@ -182,6 +185,7 @@ window.onload = async () => {
   btnLimparCarrinho.addEventListener('click', () => {
     carrinho.innerHTML = '';
     precosCarrinho = [];
+    qtCarrinho.innerText = "0";
     totalizaCarrinho();
     saveCartItems(carrinho);
   });
