@@ -1,6 +1,7 @@
 const classeCarrinho = '.cart__items';
 const carrinho = document.querySelector(classeCarrinho);
 const btnLimparCarrinho = document.querySelector('.empty-cart');
+const qtCarrinho = document.querySelector('.qtCarrinho');
 let chaveFiltro = '';
 let precosCarrinho = [];
 
@@ -49,6 +50,7 @@ const round = (num, places) => {
 const totalizaCarrinho = () => {
   const totalCarrinho = document.querySelector('.total-price');
   let resultado = precosCarrinho.reduce((acc, curr) => acc + parseFloat(curr), 0);
+
   resultado = round(resultado, 2);
   resultado = resultado.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
 
@@ -58,11 +60,12 @@ const totalizaCarrinho = () => {
 const formataTextoLi = (texto) => {
   let objeto = texto.split(' ');
   objeto = objeto[objeto.length - 1].replace('$', '');
+  objeto = objeto.replace(".","").replace(",",".")
   return objeto;
 };
 
 const remArrayPrecos = (texto) => {
-  if (precosCarrinho.indexOf(texto) > -1) precosCarrinho.splice(precosCarrinho.indexOf(texto), 1);
+  if (precosCarrinho.indexOf(parseFloat(texto)) > -1) precosCarrinho.splice(precosCarrinho.indexOf(texto), 1);
 };
 
 const cartItemClickListener = async (event) => {
@@ -75,7 +78,7 @@ const cartItemClickListener = async (event) => {
 
 const addArrayPrecos = (texto) => {
   objeto = formataTextoLi(texto);
-  precosCarrinho.push(objeto);
+  precosCarrinho.push(parseFloat(objeto));
 };
 
 const createCartItemElement = ({ id, title, price, thumbnail }) => {
