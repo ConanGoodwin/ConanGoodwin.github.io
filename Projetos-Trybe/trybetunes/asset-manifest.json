@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3ecf048c.css",
+    "main.js": "/static/js/main.cd0db6f8.js",
+    "static/media/fundo.png": "/static/media/fundo.1b1153724d3c611af1cb.png",
+    "static/media/neoneon.ttf": "/static/media/neoneon.b5bce4805b24bfc6d373.ttf",
+    "static/media/PinballWhizNf-BqMl.ttf": "/static/media/PinballWhizNf-BqMl.f23f36dba5c6f46b99c5.ttf",
+    "static/media/RocketScript-GOOO.ttf": "/static/media/RocketScript-GOOO.a79758baba08cf2d3776.ttf",
+    "static/media/cavera.jpeg": "/static/media/cavera.bd578bee082b4f327a35.jpeg",
+    "index.html": "/index.html",
+    "main.3ecf048c.css.map": "/static/css/main.3ecf048c.css.map",
+    "main.cd0db6f8.js.map": "/static/js/main.cd0db6f8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ecf048c.css",
+    "static/js/main.cd0db6f8.js"
+  ]
+}
