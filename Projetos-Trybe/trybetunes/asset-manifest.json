@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Projetos-Trybe/trybetunes/static/css/main.03d9f6dc.css",
+    "main.js": "/Projetos-Trybe/trybetunes/static/js/main.cd0db6f8.js",
+    "static/media/fundo.png": "/Projetos-Trybe/trybetunes/static/media/fundo.1b1153724d3c611af1cb.png",
+    "static/media/Neoneon-3zaD6.otf": "/Projetos-Trybe/trybetunes/static/media/Neoneon-3zaD6.0e8458da3db6e6d434c9.otf",
+    "static/media/PinballWhizNf-BqMl.ttf": "/Projetos-Trybe/trybetunes/static/media/PinballWhizNf-BqMl.f23f36dba5c6f46b99c5.ttf",
+    "static/media/RocketScript-GOOO.ttf": "/Projetos-Trybe/trybetunes/static/media/RocketScript-GOOO.a79758baba08cf2d3776.ttf",
+    "static/media/cavera.jpeg": "/Projetos-Trybe/trybetunes/static/media/cavera.bd578bee082b4f327a35.jpeg",
+    "index.html": "/Projetos-Trybe/trybetunes/index.html",
+    "main.03d9f6dc.css.map": "/Projetos-Trybe/trybetunes/static/css/main.03d9f6dc.css.map",
+    "main.cd0db6f8.js.map": "/Projetos-Trybe/trybetunes/static/js/main.cd0db6f8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.03d9f6dc.css",
+    "static/js/main.cd0db6f8.js"
+  ]
+}
