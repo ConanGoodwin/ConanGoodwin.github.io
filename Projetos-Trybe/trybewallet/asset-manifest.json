@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Projetos-Trybe/trybewallet/static/css/main.1b48599c.css",
+    "main.js": "/Projetos-Trybe/trybewallet/static/js/main.e19c9904.js",
+    "static/media/DigitaltsOrange-nRAPg.ttf": "/Projetos-Trybe/trybewallet/static/media/DigitaltsOrange-nRAPg.89e3bd020d23e916d771.ttf",
+    "static/media/fa-solid-900.ttf": "/Projetos-Trybe/trybewallet/static/media/fa-solid-900.b48ad290d0335879a92b.ttf",
+    "static/media/fa-brands-400.ttf": "/Projetos-Trybe/trybewallet/static/media/fa-brands-400.f9ee61fab3c11e2f3ed3.ttf",
+    "static/media/fa-solid-900.woff2": "/Projetos-Trybe/trybewallet/static/media/fa-solid-900.66104b766c3d0462b3c5.woff2",
+    "static/media/fa-brands-400.woff2": "/Projetos-Trybe/trybewallet/static/media/fa-brands-400.e1a247a5ef41e1975742.woff2",
+    "static/media/Quentincaps-owxKz.ttf": "/Projetos-Trybe/trybewallet/static/media/Quentincaps-owxKz.04606dc666b92d335a95.ttf",
+    "static/media/fa-regular-400.ttf": "/Projetos-Trybe/trybewallet/static/media/fa-regular-400.abf801b7acb6705a15ad.ttf",
+    "static/media/Playball-q6o1.ttf": "/Projetos-Trybe/trybewallet/static/media/Playball-q6o1.5a38da5344c3022c22bb.ttf",
+    "static/media/CollegiateheavyoutlineMedium-B0yx.ttf": "/Projetos-Trybe/trybewallet/static/media/CollegiateheavyoutlineMedium-B0yx.254fcdee7e1e92cb6a4e.ttf",
+    "static/media/fa-regular-400.woff2": "/Projetos-Trybe/trybewallet/static/media/fa-regular-400.639d2000c1ece92eaec8.woff2",
+    "static/media/fa-v4compatibility.ttf": "/Projetos-Trybe/trybewallet/static/media/fa-v4compatibility.f601162ae669f88823a3.ttf",
+    "static/media/fa-v4compatibility.woff2": "/Projetos-Trybe/trybewallet/static/media/fa-v4compatibility.745989aab0d69cab7e70.woff2",
+    "index.html": "/Projetos-Trybe/trybewallet/index.html",
+    "main.1b48599c.css.map": "/Projetos-Trybe/trybewallet/static/css/main.1b48599c.css.map",
+    "main.e19c9904.js.map": "/Projetos-Trybe/trybewallet/static/js/main.e19c9904.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1b48599c.css",
+    "static/js/main.e19c9904.js"
+  ]
+}
