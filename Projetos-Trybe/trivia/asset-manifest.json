@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/Projetos-Trybe/trivia/index.html/static/css/main.2be3937e.css",
-    "main.js": "/Projetos-Trybe/trivia/index.html/static/js/main.9cdc1c83.js",
-    "static/media/DigitaltsOrange-nRAPg.ttf": "/Projetos-Trybe/trivia/index.html/static/media/DigitaltsOrange-nRAPg.89e3bd020d23e916d771.ttf",
-    "static/media/DigitaltsLime-lgxmd.ttf": "/Projetos-Trybe/trivia/index.html/static/media/DigitaltsLime-lgxmd.4886758fced11ee5b9bb.ttf",
-    "static/media/fa-solid-900.ttf": "/Projetos-Trybe/trivia/index.html/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
-    "static/media/fa-brands-400.ttf": "/Projetos-Trybe/trivia/index.html/static/media/fa-brands-400.1815e00441357e01619e.ttf",
-    "static/media/fa-solid-900.woff2": "/Projetos-Trybe/trivia/index.html/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
-    "static/media/fa-brands-400.woff2": "/Projetos-Trybe/trivia/index.html/static/media/fa-brands-400.c210719e60948b211a12.woff2",
-    "static/media/XTypewriter-z8oP4.ttf": "/Projetos-Trybe/trivia/index.html/static/media/XTypewriter-z8oP4.e3e4af17045bcebf4771.ttf",
-    "static/media/3DIsometricBlack-BWPPG.ttf": "/Projetos-Trybe/trivia/index.html/static/media/3DIsometricBlack-BWPPG.110ee1a6a6437d1840d4.ttf",
-    "static/media/NovaDisplayRegular-x3w8O.otf": "/Projetos-Trybe/trivia/index.html/static/media/NovaDisplayRegular-x3w8O.ef8a4620a7d3a48a9711.otf",
-    "static/media/fa-regular-400.ttf": "/Projetos-Trybe/trivia/index.html/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
-    "static/media/SunnyspellsRegular-MV9ze.otf": "/Projetos-Trybe/trivia/index.html/static/media/SunnyspellsRegular-MV9ze.5d3e37fefc5faad04ba2.otf",
-    "static/media/trivia.png": "/Projetos-Trybe/trivia/index.html/static/media/trivia.7e9181d35c0b06d5abc0.png",
-    "static/media/CollegiateheavyoutlineMedium-B0yx.ttf": "/Projetos-Trybe/trivia/index.html/static/media/CollegiateheavyoutlineMedium-B0yx.254fcdee7e1e92cb6a4e.ttf",
-    "static/media/fa-regular-400.woff2": "/Projetos-Trybe/trivia/index.html/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
-    "static/media/fa-v4compatibility.ttf": "/Projetos-Trybe/trivia/index.html/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
-    "static/media/fa-v4compatibility.woff2": "/Projetos-Trybe/trivia/index.html/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
-    "index.html": "/Projetos-Trybe/trivia/index.html/index.html",
-    "main.2be3937e.css.map": "/Projetos-Trybe/trivia/index.html/static/css/main.2be3937e.css.map",
-    "main.9cdc1c83.js.map": "/Projetos-Trybe/trivia/index.html/static/js/main.9cdc1c83.js.map"
+    "main.css": "/Projetos-Trybe/trivia/static/css/main.c4834a01.css",
+    "main.js": "/Projetos-Trybe/trivia/static/js/main.b47845c0.js",
+    "static/media/DigitaltsOrange-nRAPg.ttf": "/Projetos-Trybe/trivia/static/media/DigitaltsOrange-nRAPg.89e3bd020d23e916d771.ttf",
+    "static/media/DigitaltsLime-lgxmd.ttf": "/Projetos-Trybe/trivia/static/media/DigitaltsLime-lgxmd.4886758fced11ee5b9bb.ttf",
+    "static/media/fa-solid-900.ttf": "/Projetos-Trybe/trivia/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
+    "static/media/fa-brands-400.ttf": "/Projetos-Trybe/trivia/static/media/fa-brands-400.1815e00441357e01619e.ttf",
+    "static/media/fa-solid-900.woff2": "/Projetos-Trybe/trivia/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
+    "static/media/fa-brands-400.woff2": "/Projetos-Trybe/trivia/static/media/fa-brands-400.c210719e60948b211a12.woff2",
+    "static/media/XTypewriter-z8oP4.ttf": "/Projetos-Trybe/trivia/static/media/XTypewriter-z8oP4.e3e4af17045bcebf4771.ttf",
+    "static/media/3DIsometricBlack-BWPPG.ttf": "/Projetos-Trybe/trivia/static/media/3DIsometricBlack-BWPPG.110ee1a6a6437d1840d4.ttf",
+    "static/media/NovaDisplayRegular-x3w8O.otf": "/Projetos-Trybe/trivia/static/media/NovaDisplayRegular-x3w8O.ef8a4620a7d3a48a9711.otf",
+    "static/media/fa-regular-400.ttf": "/Projetos-Trybe/trivia/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
+    "static/media/SunnyspellsRegular-MV9ze.otf": "/Projetos-Trybe/trivia/static/media/SunnyspellsRegular-MV9ze.5d3e37fefc5faad04ba2.otf",
+    "static/media/trivia.png": "/Projetos-Trybe/trivia/static/media/trivia.7e9181d35c0b06d5abc0.png",
+    "static/media/CollegiateheavyoutlineMedium-B0yx.ttf": "/Projetos-Trybe/trivia/static/media/CollegiateheavyoutlineMedium-B0yx.254fcdee7e1e92cb6a4e.ttf",
+    "static/media/fa-regular-400.woff2": "/Projetos-Trybe/trivia/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
+    "static/media/fa-v4compatibility.ttf": "/Projetos-Trybe/trivia/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
+    "static/media/fa-v4compatibility.woff2": "/Projetos-Trybe/trivia/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
+    "index.html": "/Projetos-Trybe/trivia/index.html",
+    "main.c4834a01.css.map": "/Projetos-Trybe/trivia/static/css/main.c4834a01.css.map",
+    "main.b47845c0.js.map": "/Projetos-Trybe/trivia/static/js/main.b47845c0.js.map"
   },
   "entrypoints": [
-    "static/css/main.2be3937e.css",
-    "static/js/main.9cdc1c83.js"
+    "static/css/main.c4834a01.css",
+    "static/js/main.b47845c0.js"
   ]
 }
